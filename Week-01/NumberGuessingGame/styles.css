@@ -1,0 +1,110 @@
+/* Resetting */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+/* End of Resetting */
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
+
+/* Custom Styles */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #b7e3ff 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#b7e3ff 100%);
+  background: linear-gradient(to bottom, #ffffff 0%,#b7e3ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b7e3ff',GradientType=0 );
+}
+
+.container {
+  width: 80%;
+  text-align: center;
+}
+
+hr {
+  margin: 2em 0;
+  border-top: 3px double #000;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px #000,
+               2px 2px #000,
+               3px 3px #000,
+               4px 4px #000,
+               5px 5px #000,
+               -1px -1px #000,
+               1px -1px #000,
+               -1px 1px #000;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.25em;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+}
+
+.guess-block {
+  display: inline-block;
+  width: 200px;
+}
+
+input {
+  font-size: 3em;
+  border: none;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  color: #333;
+  background: #ecf0f1;
+}
+
+button:hover {
+  background: #b7e3ff;
+}
