@@ -15,7 +15,7 @@ var myName = document.querySelector('h1');
 console.log(myName);
 
 // Step 6 - Change the text to read "Introducing {fullname}"
-myName.textContent = 'Shaun McKinnon';
+myName.textContent = 'Introducing The Legend';
 
 // Step 7 - Change the history text to read a brief bio about you
 var myBio = document.querySelector('p');
@@ -28,11 +28,19 @@ myName.style.color = 'darkred';
 // Step 9 - Select the h2 and change it to have an underline using chaining
 document.querySelector('h2').style.textDecoration = 'underline';
 
-// Create an array of names
-var names = ['The Legend', 'The Man', 'The Mystery', 'Shaun McKinnon'];
+// Step 10 - Create an array of names
+var names = ['The Man', 'The Mystery', 'Shaun McKinnon'];
 
-// Continuously iterate through the list and keep changing the name
+// Step 10a - Create a counter
 var count = 0;
+
+// Step 10b - Create an iterator to display one name after the other
 setInterval(function () {
-  
-}, 1000);
+  // Step 10c - Replace the text for myName
+  myName.textContent = names[count];
+
+  // Step 10d - Increment count if still less than the names array length
+  if (count < names.length - 1) {
+    count += 1
+  }
+}, 1500); // Step 10e - Pass a delay in milliseconds
