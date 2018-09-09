@@ -4,13 +4,10 @@ const gameBoard = document.querySelector('#gameBoard');
 // Step 1b: Store the Feedback element
 const feedback = document.querySelector('#feedback');
 
-// Step 1c: Store the Visual element
-const visual = document.querySelector('#visual');
-
-// Step 1d: Store the Letter Placement element
+// Step 1c: Store the Letter Placement element
 const letterPlacement = document.querySelector('#letterPlacement');
 
-// Step 1e: Store the Controls element
+// Step 1d: Store the Controls element
 const controls = document.querySelector('#controls');
 
 
@@ -73,16 +70,16 @@ letterControlEles.forEach(function (ele) {
     // Step 4b: Disable the element
     ele.setAttribute('disabled', 'disabled');
 
-    guessCount += 1;
-
-    // Step 4c: Send the letter to a function for checking
+    // Step 4d: Send the letter to a function for checking
     checkThisLetter( event.target.textContent );
   });
 });
 
-// Step 5: Create a variable to store a player's guesses
+// Step 5a: Create a variable to store a player's guesses
 // CHALLENGE: The guesses must be stored in the order of the phrase
 let guesses = new Array;
+
+// Step 5b: Create a variable to store the guess count and set it to 0
 let guessCount = 0;
 
 // Auto add spaces
@@ -90,27 +87,69 @@ checkThisLetter(" ");
 
 // The function for checking a letter
 function checkThisLetter (letter) {
-  var i = i = phrase.indexOf(letter, 0);
+  // Step 5c: Check if the phrase contains the letter
+  // The second argument is the starting index.
+  let i = phrase.indexOf(letter, 0);
+
+  // If the letter isn't found in the phrase
+  if (i == -1) {
+    // Step 5d: Increment the guess count
+    guessCount += 1;
+
+    // Step 5e: Add a hint to the feedback using interpolation.
+    feedback.textContent = `Oops. You have ${10 - guessCount} guesses left!`;
+  }
   
+  // While the i is not equal to -1
+  // .indexOf() will return -1 when it can't find an instance
   while(i != -1) {
+    // Step 5f: Add the letter to our guesses array at
+    // the same index as the phrase
     guesses[i] = letter;
+
+    // Step 5g: Look for the next instance of the letter
+    // by adding 1 to the starting point.
     i = phrase.indexOf(letter, i + 1);
   }
 
-  // Draw the found letters
+
+  // Step 6a: Grab all of the spans containing the blanks
+  // we created earlier.
   var blanks = document.querySelectorAll('.blank');
 
+  // Iterate over each element in our guesses array.
   guesses.forEach(function (ele, i) {
+    // If the element does not equal empty
     if (ele != "") {
+      // Step 6b: Change the text of the corresponding blank.
+      // Remember: there will be an identical number of blanks
+      // as there are letters in the phrase. We are relying on
+      // indexes to keep track of blanks, phrase, and guesses.
       blanks[i].textContent = ele;
     }
   });
 
+  // Step 7a: Create the win condition.
   if (phrase == guesses.join("")) {
-    return feedback.textContent = "YOU WON!!!";
+    // Disable all the letters.
+    letterControlEles.forEach(function (ele) {
+      // Step 7b: Disable all the letters.
+      ele.setAttribute('disabled', 'disabled');
+    });
+
+    // Step 7c: Add the "YOU WIN" text to the feedback element.
+    return feedback.textContent = "YOU WIN!!!";
   }
 
+  // Step 8a: Create the lose condition
   if (guessCount == 10) {
-    return feedback.textContent = "YOU LOSS!!!"
+    // Disable all the letters.
+    letterControlEles.forEach(function (ele) {
+      // Step 8b: Disable all the letters.
+      ele.setAttribute('disabled', 'disabled');
+    });
+
+    // Step 8c: Add the "YOU LOSE" text to the feedback element.
+    return feedback.textContent = "YOU LOSE!!!"
   }
 }
