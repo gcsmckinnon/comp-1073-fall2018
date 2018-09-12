@@ -1,0 +1,59 @@
+@import url('./fonts/Open_Sans/OpenSans-Light.ttf');
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  border-left: 30px solid #333;
+  padding-left: 1em;
+}
+
+.container>section {
+  padding: 20px 40px;
+}
+
+h1 {
+  width: 100%;
+  font-size: 3em;
+  color: #333;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #333;
+}
+
+ul > li {
+  list-style: none;
+}
+
+section#arrays > ul > li:nth-child(odd) {
+  color: #e74c3c;
+  margin-bottom: 1em;
+  border-top: 1px solid #e74c3c;
+  border-bottom: 1px solid #e74c3c;
+  font-weight: bold;
+  padding: 0.5em 0;
+}
+
+section#arrays > ul > li:nth-child(odd):before {
+  content: "\2605\00a0";
+  white-space: pre;
+}
+
+section#arrays > ul > li:nth-child(odd):after {
+  content: "\00a0\2605";
+  white-space: pre;
+}
+
+section#arrays > ul > li:nth-child(even) {
+  margin-bottom: 2em;
+}
+
+section#arrays > ul > li > ul > li {
+  color: #3498db;
+}
