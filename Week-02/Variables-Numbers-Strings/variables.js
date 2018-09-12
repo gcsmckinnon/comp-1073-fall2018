@@ -143,6 +143,9 @@ console.log(myBool === 0);
 // have to be of the same type.
 var myArr = ['Bob', 39, true];
 console.log(myArr);
+for (let i = 0; i < myArr.length; i++) {
+  console.log(myArr[i]);
+}
 
 // Arrays have so many helpers (thanks to the Array.protoype) that they
 // get their own lesson next week!
