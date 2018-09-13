@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex-column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Monoton', cursive;
+  color: #f39c12;
+  border-top: 4px solid #f39c12;
+  border-bottom: 4px solid #f39c12;
+}
+
+section#gameboard .row {
+  display: flex;
+  justify-content: center;
+}
+
+section#gameboard .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 4em;
+  color: #ecf0f1;
+  font-weight: bold;
+  margin: 2px;
+  background-color: #3498db;
+}
