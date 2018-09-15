@@ -37,7 +37,7 @@ let winConditions = [
 function killGame () {
   for (let i = 0; i < cells.length; i++) {
     cells[i].setAttribute('disabled', 'disabled');
-    cells[i].style.backgroundColor = "#bdc3c7";
+    cells[i].style.backgroundColor = "rgba(189, 195, 199,0.5)";
     cells[i].removeEventListener('click', toggleCell);
   }
 }
