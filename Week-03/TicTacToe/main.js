@@ -1,25 +1,28 @@
 let h1 = document.querySelector('h1');
 let gameboard = document.querySelector('#gameboard');
 let cells = document.querySelectorAll('.cell');
+let reset = document.querySelector('#reset');
+let message = document.querySelector('#message');
 
 let players = ['Player 1', 'Player 2'];
 let playerPiece = ['x', 'o'];
 let currentPlayer = 0;
 
-for (let i = 0; i < cells.length; i++) {
-  cells[i].addEventListener('click', toggleCell);
-}
+cells.forEach(function (cell) {
+  cell.addEventListener('click', toggleCell);
+});
 
-let stopCounter = false;
 function toggleCell(event) {
   let target = event.target
   let val = target.textContent
 
   if (val === "") {
-    stopCounter = true;
     target.textContent = playerPiece[currentPlayer];
-    evaluateBoard();
-    currentPlayer = (currentPlayer === 0) ? 1 : 0;
+
+    if (evaluateBoard()) {
+      currentPlayer = (currentPlayer === 0) ? 1 : 0;
+      message.textContent = `Player ${currentPlayer + 1}! Your Turn!`;
+    }
   }
 }
 
@@ -35,26 +38,28 @@ let winConditions = [
 ];
 
 function killGame () {
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].setAttribute('disabled', 'disabled');
-    cells[i].style.backgroundColor = "rgba(189, 195, 199,0.5)";
-    cells[i].removeEventListener('click', toggleCell);
-  }
+  cells.forEach(function (cell) {
+    cell.removeEventListener('click', toggleCell);
+    cell.setAttribute('disabled', 'disabled');
+    gameboard.classList.add('gameover');
+    message.textContent = "GAME OVER";
+  });
 }
 
 function evaluateBoard () {
   let boardFull = 0;
 
-  for (let i = 0; i < winConditions.length; i++) {
-    let c1 = cells[winConditions[i][0]].textContent;
-    let c2 = cells[winConditions[i][1]].textContent;
-    let c3 = cells[winConditions[i][2]].textContent;
+  for (let win of winConditions) {
+    let [i1, i2, i3] = win;
+    let [c1, c2, c3] = [cells[i1], cells[i2], cells[i3]].map(ele => ele.textContent);
     
     if (c1.length > 0 && c2.length > 0 && c3.length > 0) {
       boardFull += 1;
+
       if (c1 === c2 && c2 === c3) {
         h1.textContent = `Player ${currentPlayer + 1} Wins!`;
         killGame();
+        return false;
       }
     }
   }
@@ -62,5 +67,21 @@ function evaluateBoard () {
   if (boardFull === winConditions.length) {
     h1.textContent = "No more moves!";
     killGame();
+    return false;
   }
+
+  return true;
 }
+
+reset.addEventListener('click', function () {
+  currentPlayer = 0;
+
+  cells.forEach(function (ele) {
+    ele.textContent = "";
+    ele.addEventListener('click', toggleCell);
+  });
+
+  h1.textContent = "Tic! Tac!! TOE!!!";
+  message.textContent = "Player 1! Your Turn!";
+  gameboard.classList.remove('gameover');
+});
