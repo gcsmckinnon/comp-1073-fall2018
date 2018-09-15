@@ -136,7 +136,8 @@ console.log(stringArr);
 // .split() is a literal method and will only split on the  //
 // character combination you provide it. If your string has //
 // spaces after the commas, you'll have extra spaces at the //
-// beginning of each element after the first one.           ////////////////////////////////////////////////////////////////
+// beginning of each element after the first one.           //
+//////////////////////////////////////////////////////////////
 
 // Step 6c - Fix the proceeding/trailing spaces
 stringArr = arrayStr.split(/\s*,\s*/);
@@ -144,7 +145,8 @@ console.log(stringArr);
 ///////////////////////////////////////////////////////////////
 // NOTE:                                                     //
 // Regular Expression is a very handy way to perform more    //
-// flexible conditionals, robust searches, and cool parsing! /////////////////////////////////////////////////////////////////
+// flexible conditionals, robust searches, and cool parsing! //
+///////////////////////////////////////////////////////////////
 
 
 // Step 7 - Adding a new element to the end of an array
@@ -212,7 +214,8 @@ console.log(result);
 // NOTE:                                                            //
 // .filter() filters an array list based on an evaluated condition. //
 // If the condition is false, then the element will not be included //
-// in the array.                                                    ////////////////////////////////////////////////////////////////////////
+// in the array.                                                    //
+//////////////////////////////////////////////////////////////////////
 
 
 // Step 10b - .map()
