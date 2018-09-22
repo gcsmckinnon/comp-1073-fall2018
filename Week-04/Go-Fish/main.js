@@ -1,123 +1,180 @@
-// Create an array of cards
-let cards = [
-  '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '10s', 'Js', 'Qs', 'Ks', 'As',
-  '2d', '3d', '4d', '5d', '6d', '7d', '8d', '9d', '10d', 'Jd', 'Qd', 'Kd', 'Ad',
-  '2c', '3c', '4c', '5c', '6c', '7c', '8c', '9c', '10c', 'Jc', 'Qc', 'Kc', 'Ac',
-  '2h', '3h', '4h', '5h', '6h', '7h', '8h', '9h', '10h', 'Jh', 'Qh', 'Kh', 'Ah',
-]
+const cardValues = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+const deck = [cardValues, cardValues, cardValues, cardValues].flat();
 
-let players = ['player-1', 'player-2'];
-let playersHand = [];
-let currentPlayer;
-let currentCard;
+const messages = document.querySelector('#messages');
+const player1Ele = document.querySelector('#player-1 .cards');
+const player2Ele = document.querySelector('#player-2 .cards');
 
-// this can be run by human or machine
-function selectCard (card) {
-  if (playersHand[currentPlayer].indexOf(card) !== -1) {
-    currentCard = card;
+const players = [player1Ele, player2Ele];
+let playerHands = [];
 
-    let match;
-    if (match = compareCard()) {
-      removeCard(match);
-    } else {
-      
-      currentPlayer = currentPlayer === 0 ? 1 : 0;
-    }
+let currentPlayer = 0;
+let selectedCard;
+let gameWon = false;
+
+
+function dealCards (numOfCards) {
+  if (deck.length < numOfCards) {
+    messages.textContent = "No more cards. Game over!";
+    return false;
   }
-
-  console.log(playersHand);
-}
-
-// this is a human function
-function cardSelect (event) {
-  let card = event.target;
-
-  document.querySelectorAll('.card').forEach(function (ele) {
-    ele.classList.remove('cardSelected');
-  });
-
-  card.classList.toggle('cardSelected');
-
-  selectCard(event.target.textContent);
-}
-
-function drawCards (cards, numOfCards ) {
-  if (cards.length < numOfCards) return [];
   
   let selectedCards = [];
 
   for (let i = 0; i < numOfCards; i++) {
-    let index = Math.floor(Math.random() * cards.length);
-    selectedCards.push(cards.splice(index, 1)[0]);
+    let index = Math.floor(Math.random() * deck.length);
+    selectedCards.push(String(deck.splice(index, 1)[0]));
   }
 
   return selectedCards.sort();
 }
 
-function dealCards () {
-  let suits = [['d', 'diamond'], ['h', 'heart'], ['c', 'club'], ['s', 'spade']];
 
-  for (let player of players) {
-    let hand = drawCards(cards, 5);
-    playersHand.push(hand);
+function removePairs (playerIndex) {
+  let cards = {}
 
-    console.log(player, hand);
+  for (let card of playerHands[playerIndex]) {
+    cards[card] = ++cards[card] || 1;
+  }
 
-    // Only display if Player 1 (the computer's hand is hidden)
-    if (player === 'player-1') {
-      for (let card of hand) {
-        let cardEle = document.createElement('div');
-        cardEle.textContent = card;
-        cardEle.classList.add('card', 'cardStyle');
-
-        for (let suit of suits) {
-          if (card.indexOf(suit[0]) !== -1) {
-            cardEle.classList.add(suit[1]);
-          }
-        }
-
-        cardEle.addEventListener('click', cardSelect);
-        document.querySelector(`#${player}`).appendChild(cardEle);
-      }
+  playerHands[playerIndex] = [];
+  for (let card in cards) {
+    if (cards[card] !== 2) {
+      playerHands[playerIndex].push(card);
+    } else {
+      console.log('Removed Pair: ', card);
     }
   }
 }
 
 
-function removeCard(match) {
-  let index = playersHand[currentPlayer].indexOf(currentCard);
-  playersHand[currentPlayer].splice(index, 1);
+function removeCard (card) {
+  for (let [handIndex, cards] of playerHands.entries()) {
+    let cardIndex = cards.indexOf(card);
 
-  let otherPlayer = currentPlayer === 0 ? 1 : 0;
-  index = playersHand[otherPlayer].indexOf(match);
-  playersHand[otherPlayer].splice(index, 1);
+    if (cardIndex !== -1) {
+      playerHands[handIndex].splice(cardIndex, 1);
+    }
+  }
 }
 
 
-function compareCard () {
-  let otherPlayer = currentPlayer === 0 ? 1 : 0;
-  let cardWithoutSuit = currentCard.match(/^\d+|^[JQKA]/g);
+function goFish (playerIndex) {
+  let card;
 
-  let matches = playersHand[otherPlayer].filter(function (ele) {
-    if (ele.indexOf(cardWithoutSuit) !== -1) return ele;
-  });
-
-  if (matches.length > 0) {
-    return matches[0];
+  if (card = dealCards(1)) {
+    playerHands[playerIndex].push(card[0]);
   }
 
-  return false;
+  console.log("Go Fish Player " + currentPlayer, card);
 }
 
 
-function startGame () {
-  dealCards();
-
-  currentPlayer = 0;
+function hasCard(playerIndex, card) {
+  return playerHands[playerIndex].indexOf(card) !== -1;
 }
 
 
-function resetGame () {}
+function evaluateBoard () {
+  let opponent = currentPlayer === 0 ? 1 : 0;
+
+  if (selectedCard && hasCard(opponent, selectedCard)) {
+    removeCard(selectedCard);
+    messages.textContent = `Awesome! Play again, Player ${currentPlayer + 1}!`;
+    displayCards();
+
+    if (playerHands[currentPlayer].length === 0) {
+      return win();
+    }
+  } else if (selectedCard) {
+    messages.textContent = `Player ${currentPlayer === 0 ? 2 : 1} says, "GO FISH!".`;
+
+    goFish(currentPlayer);
+    removePairs(currentPlayer);
+    displayCards();
+
+    currentPlayer = opponent;
+    messages.textContent = `Player ${currentPlayer + 1}! Your Turn!`;
+
+    refreshBoard();
+  } else {
+    messages.textContent = `Player ${currentPlayer + 1}! Your turn!`;
+  }
+
+  // reset the selected card
+  selectedCard = null;
+  console.log(playerHands[0]);
+  console.log(playerHands[1]);
+}
 
 
-startGame();
+function win () {
+  gameWon = true;
+  messages.textContent = `Congratulations, Player ${currentPlayer + 1}!!!`;
+}
+
+
+// Starting game functions
+function initDeal () {
+  for (let i = 0; i < 2; i++) {
+    playerHands.push(dealCards(8));
+    removePairs(i);
+  }
+}
+
+
+function displayCards () {
+  players.forEach(function (ele, index) {
+    ele.innerHTML = "";
+
+    for (let card of playerHands[index]) {
+      let cardEle = document.createElement('div');
+      cardEle.classList.add('card', 'cardStyle');
+      cardEle.dataset.value = card;
+      cardEle.onclick = cardClicked;
+      
+      if (index === 0) {
+        cardEle.textContent = card;
+      }
+
+      ele.appendChild(cardEle);
+    }
+  });
+}
+
+
+function refreshBoard () {
+  document.querySelectorAll('.card').forEach(function (ele) {
+    ele.classList.remove('cardSelected');
+  });
+}
+
+
+// human functions
+function cardClicked (event) {
+  selectedCard = event.target.dataset.value;
+
+  refreshBoard();
+
+  event.target.classList.add('cardSelected');
+  evaluateBoard();
+}
+
+initDeal();
+displayCards();
+console.log(playerHands);
+
+let AIinTurn = false;
+setInterval (function () {
+  if (currentPlayer === 1 && !AIinTurn) {
+    AIinTurn = true;
+    let cards = player2Ele.querySelectorAll('.card');
+
+    let cardIndex = Math.floor(Math.random() * cards.length);
+    selectedCard = cards[cardIndex].dataset.value;
+
+    console.log('AI chose:', selectedCard);
+    evaluateBoard();
+    AIinTurn = false;
+  }
+}, 500);
