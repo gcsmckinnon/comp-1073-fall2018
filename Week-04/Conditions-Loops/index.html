@@ -21,14 +21,25 @@
         <h1>The Conditions & Loops Emporium</h1>
       </header>
       
-      <section id="filter">
-        <label>Price less than...</label>
-        <input type="range" min="0" max="400" step="5" value="20" class="slider" id="priceRange">
-        <div id="priceRangeValue"></div>
+      <section id="searchAndFilter">
+        <div id="filter">
+          <label>Price less than...</label>
+          <input type="range" min="0" max="500" step="5" value="10" class="slider" id="priceRange">
+          <div>$<span id="priceRangeValue"></span>.00</div>
+        </div>
+        
+        <div id="search">
+          <input id="searchInput" type="text" name="search" placeholder="search...">
+        </div>
       </section>
 
-      <section id="products">
+      <hr>
+
+      <section>
         <h2>Products</h2>
+
+        <div id="products">
+        </div>
       </section>
     </div>
 
