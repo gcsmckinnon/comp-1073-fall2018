@@ -10,15 +10,15 @@ console.log(typeof numToString)
 
 // Step 2 - Browser Prompt Functions
 // Step 2a - Write an alert
-// alert("Welcome to the Game!!!")
+alert("Welcome to the Game!!!")
 
 // Step 2b - Write a confirm
-// let confirmation = confirm("Do you like the game?")
-// console.log(typeof confirmation, confirmation)
+let confirmation = confirm("Do you like the game?")
+console.log(typeof confirmation, confirmation)
 
 // Step 2c - Write a prompt
-// let response = prompt("How often do you play games?")
-// console.log(typeof response, response)
+let response = prompt("How often do you play games?")
+console.log(typeof response, response)
 
 // Step 2d - Comment out the above code to avoid it
 // calling each time
