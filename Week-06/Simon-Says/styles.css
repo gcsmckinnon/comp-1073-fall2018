@@ -1,0 +1,75 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+#scoreBoard {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1em;
+  margin-top: 3em;
+}
+
+#gameboard {
+  display: inline-grid;
+  border-radius: 250px;
+  grid-gap: 20px;
+  grid-template-columns: 200px 200px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px
+}
+
+#message {
+  color: #c0392b;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.light {
+  height: 200px;
+  width: 200px;
+  transition: 0.15s;
+}
+
+.light:nth-child(1) {
+  border-top-left-radius: 200px;
+  background-color: #1B5E20;
+}
+.hover-light:nth-child(1):hover, .light:nth-child(1).on {
+  background-color: #00E676;
+}
+
+.light:nth-child(2) {
+  border-top-right-radius: 200px;
+  background-color: #B71C1C;
+}
+.hover-light:nth-child(2):hover, .light:nth-child(2).on {
+  background-color: #F44336;
+}
+
+
+.light:nth-child(3) {
+  border-bottom-left-radius: 200px;
+  background-color: #F57F17;
+}
+.hover-light:nth-child(3):hover, .light:nth-child(3).on {
+  background-color: #FFEB3B;
+}
+
+
+.light:nth-child(4) {
+  border-bottom-right-radius: 200px;
+  background-color: #01579B;
+}
+.hover-light:nth-child(4):hover, .light:nth-child(4).on {
+  background-color: #29B6F6;
+}
+
