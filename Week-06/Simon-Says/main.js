@@ -1,55 +1,86 @@
-const notes = [392.0, 440.0, 523.25, 587.33]
-
+// Step 1 - Create a new AudioContext
 let context = new AudioContext()
 
-function tone (frequency) {
+// Some notes (G4, A4, C5, D5)
+const notes = [392.0, 440.0, 523.25, 587.33]
+
+
+// Step 2 - Using anonymous function syntax, create a tone function
+// that accepts an argument called "frequency"
+const tone = function (frequency) {
+  // Step 2a - Create an oscillator and gain and store them in variables
   let osc = context.createOscillator()
   let gain = context.createGain()
 
-  osc.connect(gain)
+  // Step 2b - Set the type and the frequency
   osc.type = 'sine'
   osc.frequency.value = frequency
+
+  // Step 2c - Create a falloff effect for the note
+  gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 1.5)
+
+  // Step 2d - Connect the destination and the gain
   gain.connect(context.destination)
-  // gain.gain.exponentialRampToValueAtTime(0.5, context.currentTime)
+  osc.connect(gain)
+
+  // Step 2e - Play the note
   osc.start(0)
-  gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 1)
+
+  // This is used to resume audio in Chrome
   context.resume()
 }
 
-function randArrEle (arr) {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
+
+// Step 3 - Using arrow function syntax, create a function that
+// returns a random element from an array
+const randArrEle = arr => arr[Math.floor(Math.random() * arr.length)]
 
 
-// HTML Elements
+// Step 4 - Create all the needed HTML elementsHTML Elements
 const actions = document.querySelector('#actions')
 const message = document.querySelector('#message')
 const scoreboard = document.querySelector('#scoreboard')
 const score = scoreboard.querySelector('#score')
 const gameboard = document.querySelector('#gameboard')
-const lights = document.querySelectorAll('.light')
-const start = document.querySelector('#start')
 const scoreModifier = document.querySelector('#scoreModifier')
 const scoreModifierValue = document.querySelector('#scoreModifierValue')
+const start = document.querySelector('#start')
+
+// Step 5 - Grab all the light elements from the DOM
+const lights = document.querySelectorAll('.light')
 
 
-// Setup starting variables
+// Step 6 - Create some variables to store state
 let patternState = []
 let playerPattern = []
 
-// select 4 random tones
+// Step 7 - Using a for loop, iterate 4 times
 for (let i = 0; i < 4; i++) {
+  // Step 7a - Store the light we're working with
   let light = lights[i]
+
+  // Step 7b - Store the note
   light.dataset.note = notes[i]
 
+  // Step 7c - Using event binding, bind the
+  // mousedown event to the light and supply a function
+  // that will toggle the hover-light class
   light.onmousedown = function () {
     light.classList.toggle('hover-light')
   }
 
+  // Step 7d - Using event binding, bind the
+  // mouseup event to the light and supply a function
+  // that will toggle the hover-light class
   light.onmouseup = function () {
     light.classList.toggle('hover-light')
   }
 
+  // Step 7e - Using event binding, bind the
+  // click event to the light and supply a function
+  // that will execute the tone function,
+  // push the light onto the player pattern
+  // and evaluate the pattern
   light.onclick = function () {
     tone(light.dataset.note)
     playerPattern.push(light.dataset.note)
@@ -57,10 +88,8 @@ for (let i = 0; i < 4; i++) {
   }
 }
 
-patternState.push(randArrEle(lights))
-createHints()
 
-let playSpeed = 1000
+let playSpeed = 800
 function playPattern () {
   let clonedPattern = patternState.slice(0)
 
@@ -82,21 +111,19 @@ function playPattern () {
   }, playSpeed)
 }
 
-start.onclick = playPattern
+
+
 reset.onclick = function () {
-  context = null
   playerPattern = []
   patternState = []
+  patternState.push(randArrEle(lights))
+
   message.textContent = ""
   score.textContent = 0
-  patternState.push(randArrEle(lights))
+
+  context = null
   context = new AudioContext
-
-  document.querySelectorAll('.hint').forEach(function (hint) {
-    actions.removeChild(hint)
-  })
-
-  createHints()
+  playPattern()
 }
 
 const evaluatePattern = function () {
@@ -111,9 +138,6 @@ const evaluatePattern = function () {
     let modifier = parseInt(scoreModifierValue.textContent)
     score.textContent = `${(tally += modifier)}`
 
-    // slightly increase the play speed
-    // if (playSpeed > 200) playSpeed = (playSpeed - (patternState.length * 5))
-
     // play the pattern again
     playPattern()
     return
@@ -127,30 +151,12 @@ const evaluatePattern = function () {
   }
 }
 
-function createHints () {
-
-  for (let i = 0; i < 3; i++) {
-    let hint = document.createElement('button')
-
-    hint.textContent = `Hint ${i + 1}`
-    hint.classList.add('btn', 'btn-warning', 'hint')
-
-    hint.onclick = function () {
-      hint.setAttribute("disabled", "disabled")
-
-      playPattern()
-
-      hint.parentNode.removeChild(hint)
-    }
-
-    actions.append(hint)
-  }
-}
-
 scoreModifier.oninput = function (event) {
   scoreModifierValue.textContent = event.target.value
 
   playSpeed = 1000 - (event.target.value * 65)
-
-  console.log(playSpeed)
 }
+
+start.onclick = playPattern
+
+patternState.push(randArrEle(lights))
