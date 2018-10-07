@@ -14,83 +14,246 @@
 
   <body>
     <div class="container">
-      <header>
-        <h1>The DOM & Events</h1>
+      <header class="mt-5">
+        <h1>Events</h1>
       </header>
 
-      <section>
-        <header>
-          <h2>DOM</h2>
-        </header>
+      <hr><hr>
 
-        <div>
-          <h3>Introductions</h3>
+      <article>
+        <section class="mt-5">
+          <header class="mb-4">
+            <h2>DOM Events</h2>
+          </header>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <h3>What are Events</h3>
 
-          <hr>
+              <p class="mb-5">
+                <strong>Introducing Events:</strong><br>
+                An event is an interaction that is registered with the document. Usually the events are physical interactions like clicking, hovering, moving your mouse, pressing a key, or scrolling. But events are not limited to these interactions and can be triggered by things the system is doing or the document is doing. Because of this, events are insanely powerful and provide us a way of making sense and interacting with our asynchronous environment.
+              </p>
 
-          <p><strong>What is the DOM?</strong> The DOM stands for Document Object Model. It is a representation of your HTML document. The DOM essentially creates an objectified version of your HTML page, allowing you to read, manipulate, and destroy elements at your whim.</p>
+              <p>
+                <strong>Event Dispatching:</strong><br>
+                When we interact with the page and trigger an event, the event is dispatched. We can utilize listeners to subscribe to dispatched events. These will allow us to execute code based on an interaction. For example, when a user clicks submit we can pre-validate their form to ensure it meets our requirements.
+              </p>
 
-          <p>Understanding the DOM structure allows you to manipulate it with a programmign language like JavaScript more effectively.</p>
-        </div>
+              <p>
+                <strong>Dispatch/Listen = Publish/Subscribe:</strong><br>
+                The pub/sub design pattern is simple: a block of code subscribes to an event. The event doesn't care about who is subscribed to it. It will operate as it sees fit. When the event is published, all the subscribers will execute.
+              </p>
 
-        <div>
-          <h3>DOM Data Types</h3>
+              <p>
+                <strong>Event Bubbling:</strong><br>
+                When an event is dispatched, it bubbles. This means an element that has an event applied to it will dispatch the event, the event will bubble to the parent element, then to its parent, and eventually stop at the &lt;body&gt; element.
+                <br><br>
+                This is important to understand, because if you have subscribed your element to a click event, and its parent is also subscribed, you will wind up with a bubbling issue, where when you click the child, it also in turn clicks the parent. In order to prevent bubbling we must use <strong>.stopPropagation()</strong>. This will prevent the event from bubbling to the surface of the document.
+              </p>
+            </div>
 
-          <hr>
+            <div class="col-sm-6" id="eventLecture">
+              <div id="mouseyEventGrid">
+                <div id="clicking">click</div>
+                <div id="mouseOverMouseOut">out</div>
+                <div id="mouseDownMouseUp">up</div>
+                <div contenteditable id="changing">change</div>
+              </div>
 
-          <p><strong>Document:</strong></p>
-          <p><strong>Element:</strong></p>
-          <p><strong>NodeList:</strong></p>
-        </div>
+              <div id="formEventGrid" class="mt-5">
+                <div id="validationMessage" class="mb-3">I will show messages</div>
+                <div id="inputting" class="mb-3">
+                  <input class="form-control" type="text" placeholder="I can change other things">
+                </div>
 
-        <div>
-          <h3>Common DOM Methods</h3>
+                <div id="selecting" class="mb-3">
+                  <select class="form-control">
+                    <option>I am option 1</option>
+                    <option>I am option 2</option>
+                    <option>I am option 3</option>
+                  </select>
+                </div>
+              </div>
 
-          <hr>
+              <div class="mt-5">
+                <div id="clickMessage"></div>
+                <div id="parentClicker">
+                  parent click
+                  <div id="childClicker">
+                    child click
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p><strong>document.createElement():</strong></p>
-          <p><strong>document.setAttribute():</strong></p>
-          <p><strong>document.querySelector():</strong></p>
-          <p><strong>document.querySelectorAll():</strong></p>
-        </div>
-      </section>
+          <div>
+            <h3>Event Listening/Subscribing</h3>
+            
+            <p class="mb-5" id="clickEvents">
+              <strong>On Click:</strong> A click event is published when a user clicks with their mouse (or touches the screen) on an element that is set to dispatch the event. The keyword for the click event depends on how it is used:<br>
 
+              <!-- Step 1a - Add the on click function -->
+              <span class="eventExamples">
+                <span class="htmlEx" onclick="clickEventFunction()">HTML</span><br>
+                <span class="eventListenerEx">listener</span><br>
+                <span class="propertyEx">property</span>
+              </span>
+            </p>
 
-      <section>
-        <header>
-          <h2>DOM Events</h2>
-        </header>
+            <p class="mb-5" id="mouseEvents">
+              <strong>On Hover:</strong> Hovering is the act of bringing your mouse over an element (no clicking, no dragging). This event keyword is mouseover. You can also detect when the mouse has left using mouseout.<br>
 
-        <div>
-          <h3>The Event System</h3>
+              <!-- Step 2a - Add the on mouse over and mouse down functions -->
+              <span class="eventExamples">
+                <span class="htmlEx" onmouseover="mouseoverEventFunction()" onmouseout="mouseoutEventFunction()">HTML</span><br>
+                <span class="eventListenerEx">listener</span><br>
+                <span class="propertyEx">property</span>
+              </span>
+            </p>
+ 
+            <p class="mb-5" id="focusBlurEvents">
+              <strong>On Focus/Blur:</strong> Focus events occur when you're interacting with a form element. Blur events occur when you stop interacting with the form element to interact.<br>
 
-          <hr>
+              <!-- Step 3a - Add the focus and blur functions -->
+              <span class="eventExamples">
+                <span class="htmlEx">
+                  <input class="inputExample" onfocus="focusEventFunction()" onblur="blurEventFunction()">
+                </span><br>
+                <span class="eventListenerEx">
+                  <input class="inputExample">
+                </span><br>
+                <span class="propertyEx">
+                  <input class="inputExample">
+                </span>
+              </span>
+            </p>
 
-          <p><strong>Event Loop</strong></p>
-        </div>
+            <p class="mb-5" id="inputEvents">
+              <strong>On Input:</strong> When the value of an input field is modified it publishes an on input event. We can use that to do several different things. A couple of common things are to validate the field or use the value to generate suggestions, like in a search field.<br>
 
-        <div>
-          <h3>Event Listening/Subscribing</h3>
+              <!-- Step 4a - Add the input function -->
+              <span class="eventExamples">
+                <span class="htmlEx">
+                  <input class="inputExample" oninput="inputEventFunction()">
+                </span><br>
+                <span class="eventListenerEx">
+                  <input class="inputExample">
+                </span><br>
+                <span class="propertyEx">
+                  <input class="inputExample">
+                </span>
+              </span>
+            </p>
 
-          <hr>
+            <p class="mb-5" id="changeEvents">
+              <strong>On Change:</strong> Select boxes publish an on change event whenever the field has been changed. This is true also for check boxes and radio buttons. The huge benefit to this is the ability to make decisions based on the change. For example, if you were to choose a country, we could then auto-populate the provinces. If you were to check a box, we could reveal further options.<br>
 
-          <p><strong>On Click:</strong></p>
-          <p><strong>On Hover:</strong></p>
-          <p><strong>On Change:</strong></p>
-          <p><strong>On Focus/Blur:</strong></p>
-          <p><strong>On Scroll:</strong></p>
-        </div>
+              <!-- Step 5a - Add the on change function -->
+              <span class="eventExamples">
+                <span class="htmlEx">
+                  <select onchange="changeEventFunction()">
+                    <option>first</option>
+                    <option>second</option>
+                    <option>third</option>
+                    <option>changed</option>
+                  </select>
+                </span><br>
+                <span class="eventListenerEx">
+                  <select>
+                    <option>first</option>
+                    <option>second</option>
+                    <option>third</option>
+                    <option>changed</option>
+                  </select>
+                </span><br>
+                <span class="propertyEx">
+                  <select>
+                    <option>first</option>
+                    <option>second</option>
+                    <option>third</option>
+                    <option>changed</option>
+                  </select>
+                </span>
+              </span>
+            </p>
+          </div>
 
-        <div>
-          <h3>Custom Events</h3>
+          <div>
+            <h3>Removing Events</h3>
+            
+            <p class="mb-5" id="removeEvents">
+              <strong>On Click:</strong> Often once an event has occured you may not want it to occur again. You can accomplish this by simply removing the event. Removing events can be difficult, because in order to remove the event, you must know the name of the function it's executing. This means when you create the event listener you have to use named functions. Also, only events bound with <strong>.addEventListener()</strong> can be removed using <strong>.removeEventListener()</strong><br>
 
-          <hr>
+              <!-- Step 1a - Add the on click function -->
+              <span class="eventExamples">
+                <span class="htmlEx" onclick="removeThisEventFunction()">HTML</span><br>
+                <span class="eventListenerEx">listener</span><br>
+                <span class="propertyEx">property</span>
+              </span>
+            </p>
+          </div>
 
-          <p><strong>Creating an Event:</strong></p>
-          <p><strong>Subscribing to an Event:</strong></p>
-          <p><strong>Publishing an Event:</strong></p>
-        </div>
-      </section>
+          <div>
+            <h3>Stopping Default Actions/Bubbling</h3>
+            
+            <p class="mb-5" id="preventDefault">
+              <strong>Prevent Default:</strong> When we click submit on a form or click on a link, a default action occurs in the browser. When we click on submit, the form will post to an address. When we click the link, it navigates us away from the page. In order to stop this, we can use a method called <strong>.preventDefault()</strong> in our callback function. This binds to the <strong>event</strong> object.<br>
+
+              <!-- Step 1a - Add the on click function -->
+              <span class="eventExamples">
+                <a id="stoppingDefaultActions" href="https://example.com" target="_blank">
+                  <i class="fa fa-link"></i>
+                  I like to go places
+                </a>
+              </span>
+            </p>
+            
+            <p class="mb-5" id="stopBubbling">
+              <strong>Stop Bubbling:</strong> Bubbling is the act of an event calling up the DOM. This means a <strong>.click()</strong> event will be called on the child you clicked, and every parent that subscribes to that event. In order to prevent this, we have a method we can bind to the event called <strong>.stopPropagation()</strong><br>
+
+              <!-- Step 1a - Add the on click function -->
+              <span class="eventExamples">
+                <div id="parentEle">
+                  Parent Click
+                  <div id="childEle">Child Click</div>
+                </div>
+              </span>
+            </p>
+          </div>
+
+          <div>
+            <h3>Custom Events</h3>
+
+            <p>Custom events are events you create in order to trigger operations in your code. You may have an event that executes after a set period of time. Or you may have an event execute when something occurs in the user interface. Or based on a condition. Or based on API response. the important take away is that custom events allow us to decouple operations by simply subscribing code to a published event.</p>
+
+            <p class="mb-5">
+              <strong>Creating an Event:</strong> Creating an event requires instantiating a new <strong>Event</strong> object. We pass the constructor one argument; the name of the event.<br>
+              <strong>let event = new Event('eventName')</strong><br><br>
+
+              <span class="example" id="createEvent"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>Subscribing to an Event:</strong> Only objects that have implemented the <strong>EventTarget</strong> interface are able to receive events and allowed to listen for them. All HTML have implemented the EventTarget interface. This means we can use any HTML element to subscribe to our custom event.<br><br>
+
+              <strong>element.addEventListener('eventName', callbackFunctionDefinition)</strong>
+
+              <span class="example" id="subscribeToEvent"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>Publishing an Event:</strong> Dispatching an event is the act of publishing the event. This will cause the elements subscribed to the event to execute the event callback.<br><br>
+
+              <strong>element.dispatchEvent(event)</strong>
+
+              <span class="example" id="publishEvent"></span>
+            </p>
+          </div>
+        </section>
+      </article>
+
     </div>
     
     <!-- Third-Party CDNs -->
@@ -98,6 +261,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
     <!-- Custom JS -->
+    <script src="lectureEvents.js"></script>
     <script src="main.js"></script>
   </body>
   

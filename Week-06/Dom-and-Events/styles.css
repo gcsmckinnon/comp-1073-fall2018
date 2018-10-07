@@ -1,0 +1,153 @@
+body {
+  background: #ecf0f1;
+}
+
+*, p, a {
+  color: #34495e;
+  text-shadow:0px 2px 3px #fff;
+}
+
+h1 {
+  color: #34495e;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+section {
+  border-left: 30px solid #c0392b;
+  padding-left: 2em;
+}
+
+h3 {
+  margin-top: 2em;
+}
+
+p {
+  margin-left: 2em;
+}
+
+.example {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.example::before {
+  content: "Output: ";
+  color: #c0392b;
+}
+
+.theAwesomeClass {
+  display: block;
+  text-shadow: none;
+  text-align: center;
+}
+
+.theAwesomeClass p {
+  text-shadow: none;
+  color: inherit;
+  margin: inherit;
+}
+
+.eventExamples {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+.htmlEx, .eventListenerEx, .propertyEx {
+  height: 100px;
+  width: 100px;
+  background-color: #2c3e50;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.htmlEx {
+  background-color: #c0392b;
+}
+
+.eventListenerEx {
+  background-color: #d35400;
+}
+
+.htmlEx input, .htmlEx select, .eventListenerEx input, .eventListenerEx select, .propertyEx input, .propertyEx select {
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+
+#eventLecture {
+  padding: 2em;
+  padding-left: 5em;
+}
+
+#mouseyEventGrid {
+  padding: 20px;
+  display: grid;
+  grid-template: 100px 100px/100px 100px;
+  grid-gap: 20px;
+}
+
+#mouseyEventGrid > div {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px #333;
+  font-size: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+#clicking {
+  background-color: #f1c40f;
+}
+
+#mouseOverMouseOut {
+  background-color: #f39c12;
+}
+
+#mouseDownMouseUp {
+  background-color: #e67e22;
+}
+
+#changing {
+  background-color: #d35400;
+}
+
+
+#parentClicker, #childClicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #d35400;
+  color: #fff;
+  text-shadow: none;
+  padding: 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#childClicker {
+  background-color: #f1c40f;
+  height: 60%;
+  margin-left: 2em;
+  margin-right: 2em;
+}

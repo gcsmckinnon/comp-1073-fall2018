@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <!-- Third-Party CDNs -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>The DOM & Events</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="mt-5">
+        <h1>The DOM & Events</h1>
+      </header>
+
+      <hr><hr>
+      
+      <article>
+        <section class="my-5">
+          <header class="mb-4">
+            <h2>DOM</h2>
+          </header>
+
+          <div>
+            <h3>Introductions</h3>
+
+            <p><strong>What is the DOM?</strong> The DOM stands for Document Object Model. It is a representation of your HTML document. The DOM essentially creates an objectified version of your HTML page, allowing you to read, manipulate, and destroy elements at your whim.</p>
+
+            <p>Understanding the DOM structure allows you to manipulate it with a programming language like JavaScript more effectively. The DOM, however, is not explicitly a JavaScript thing. It was made to be independent of any programming languages.</p>
+
+            <p>The DOM can be paired with an API in a specific programming language. This provides a way for us to manipulate the elements available in the document. The JavaScript API provides us with properties, methods, and events in the form of objects. For example, the <strong>Document</strong> object that represents the entire document itself; the <strong>Element</strong> object that represents elements that form the document; the <strong>Event</strong> object that allows us to tap into any event that takes place in the DOM.</p>
+          </div>
+
+          <div>
+            <h3>DOM Data Types</h3>
+            
+            <p>As you should know, when we create a new class we are creating a new data type for our application. The JavaScript DOM API provides us with quite a few built in data types, but there are some you should be aware of as you will see them often as you work with the DOM:</p>
+
+            <p><strong>Document:</strong> This is the root of your document and represents the web page you have currently loaded. The Document object provides several properties and methods for us to control the document.</p>
+
+            <p><strong>Element:</strong> Elements are individual HTML structures that are on the page. Many of these will describe themselves differently, but inevitably they all inherit from the Element object.</p>
+
+            <p><strong>NodeList:</strong> When we retrieve multiple elements from the document, they are returned in an array-like structure that is known as a NodeList. NodeList gives us several methods to work with this list and each element's potential children. Because it is array-like, we can use many of the array iterators we have available to us on the NodeList object, like .forEach(), for/of, and a standard for loop.</p>
+          </div>
+
+          <div>
+            <h3>Common DOM Methods</h3>
+
+            <p class="mb-5">
+              <strong>document.querySelector('CSS type selector'):</strong>
+              <br>
+              Providing a CSS type selector as an argument to this method will allow it to return the <strong><em>first found</em></strong> occurrence of a DOM element, or it will return <strong>null</strong>.
+              <br>
+              <span class="example" id="querySelectorEx"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>document.createElement('HTML tag'):</strong>
+              <br>
+              This method takes an HTML tag name as an argument. It will then create a new <strong>HTMLElement</strong> object known as a <strong>document fragment</strong> meaning it will not exist in the document until you either <strong>append</strong> it or <strong>prepend</strong> it to a parent element.
+              <br>
+              <span class="example" id="createElementEx"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>document.querySelectorAll('CSS type selector'):</strong>
+              <br>
+              This method takes a CSS type selector as an argument and returns an <strong>NodeList</strong>. This is an array-like object, but not an array. We can iterate through it in the same fashions as we iterate through arrays. It even has some methods and properties that mimic the array object's versions.
+              <br>
+              <span class="example" id="querySlectorAllEx"></span>
+            </p>
+          </div>
+
+          <div>
+            <h3>Common Element Properties</h3>
+
+            <p class="mb-5">
+              <strong>element.{id/href/src/name/etc...}:</strong>
+              <br>
+              Being able to select and modify attributes dynamically provides JavaScript programmers a lot of flexibility when working with DOM objects. It is an essential operation especially when we're creating new DOM elements as we did earlier (<strong>myNewElement</strong>).
+              <br>
+              <span class="example" id="attributeEx1"></span>
+              <br>
+              <span class="example" id="attributeEx2"></span>
+              <br>
+              <em>In order to select the input inside #attributeEx3, we can walk the DOM by using our already stored element and calling <strong>querySelector()</strong> on it:</em>
+              <br>
+              <strong>const attribute3Input = attributeEx3.querySelector('input')</strong>
+              <br>
+              <span class="example" id="attributeEx3">
+                <input>
+              </span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.style:</strong>
+              <br>
+              Often we want to modify the CSS of an element dynamically. We can access the <strong>style</strong> property and then, using <em>camelCase</em> syntax, we can add/modify various style attributes.
+              <br>
+              <span class="example" id="styleEx1"></span>
+              <br>
+              <span class="example" id="styleEx2"></span>
+              <br>
+              <span class="example" id="styleEx3"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.classList:</strong>
+              <br>
+              Being able to add/modify/remove classes gives us some real dynamic power, especially when building a nice User Experience (UX). Classes help us keep our CSS out of our JavaScript. This provides us modularity and promotes code reuse as we can give an application a completely new look and feel just by modifying a simple CSS file.
+              <br>
+              <span class="example" id="classListAddEx"></span>
+              <br>
+              <span class="example" id="classListAddMultipleEx"></span>
+              <br>
+              <span class="example" id="classListRemoveEx"></span>
+              <br>
+              <span class="example" id="classListToggleEx"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.{textContent/value/innerHTML}:</strong>
+              <br>
+              Quite often we need to change the content of an element in one way or another. Non-form are easy to change as we can simply modify their <strong>.textContent</strong> property. However, form elements elements require us to modify their <strong>.value</strong> property instead.
+              <br><br>
+              <em style="color: #c0392b;">If we want to change the HTML instead of just the text we can use the <strong>.innerHTML</strong> property. It is important that you understand this will blow away any HTML in the element (unless you concatenate), destructively modifying your HTML. <strong>.innerHTML</strong> shouldn't be your goto option. It is considered better practice to use the Element object to add/modify/remove elements.</em>
+              <br>
+              <span class="example" id="textContentReadEx"></span>
+              <br>
+              <span class="example" id="textContentWriteEx"></span>
+              <br>
+              <span class="example" id="valueReadEx">
+                <input type="number" value="256">
+              </span>
+              <br>
+              <span class="example" id="valueWriteEx">
+                <input type="number">
+              </span>
+              <br>
+              <span class="example" id="innerHTMLReadEx"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.{append/prepend}:</strong>
+              <br>
+              Appending and Prepending allow us to place elements where we want within a parent element.
+              <br><br>
+              <em style="color: #c0392b;">When we created the myNewElement, it created an instance object of Element and stored it in our variable. Objects, like in most languages, are passed by reference, and not by copy. This means, if we append/prepend our element and then attempt to append/prepend it somewhere else, it will simply move because it is literally the same element. If we want to copy our element, we must use the element method <strong>.cloneNode()</strong>. <strong>.cloneNode()</strong> takes an argument that specifies whether we want a deep clone. A deep clone will clone all the elements inside our element as well as the element itself.</em>
+              <br>
+              <span class="example" id="appendEx">
+                <span>Below Existing Element</span>
+              </span>
+              <br>
+              <span class="example" id="prependEx">
+                <span>Above Existing Element</span>
+              </span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.dataset:</strong>
+              <br>
+              The data attribute provides us a clean way of moving data back and forth between the document and our programming language. It's a great place to put in basic data, or instructions we may want to execute. The JavaScript API provides a <strong>.dataset</strong> property on each element, allowing us to easily write and read data attributes.
+              <br>
+              <span class="example" id="writeDatasetEx"></span>
+              <br>
+              <span class="example" id="readDatasetEx"></span>
+            </p>
+
+            <p class="mb-5">
+              <strong>element.setAttribute('attribute name', 'attribute value'):</strong>
+              <br>
+              This is a method, so it doesn't really belong under this section. This is another way of creating/setting attributes of an <strong>Element</strong>. This method takes 2 arguments: an attribute name and an attribute value.
+              <br>
+              <br>
+              In addition to <strong>.setAttribute()</strong> we also have <strong>.getAttribute()</strong>. This method takes one argument and will return an attribute's value if it's set.
+              <br>
+              <span class="example" id="setAttributeEx"></span>
+              <br>
+              <span class="example" id="getAttributeEx"></span>
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+    
+    <!-- Third-Party CDNs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+  </body>
+  
+</html>
