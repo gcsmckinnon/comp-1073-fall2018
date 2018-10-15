@@ -1,0 +1,5 @@
+#examples {
+  display: grid;
+  grid-template: auto auto auto/auto auto auto;
+  grid-gap: 1em;
+}
