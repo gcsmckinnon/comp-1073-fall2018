@@ -10,13 +10,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     
-    <title>The DOM</title>
+    <title>The DOM: Part Two</title>
   </head>
 
   <body>
     <div class="container">
       <header id="main-header" class="mt-5">
-        <h1>The DOM</h1>
+        <h1>The DOM: Part Two</h1>
       </header>
 
       <hr><hr>
@@ -24,225 +24,102 @@
       <article>
         <main class="my-5">
           <header id="secondary-header" class="mb-4">
-            <h2>DOM (Document Object Model</h2>
+            <h2>HTMLELements & HTMLCollections/NodeLists</h2>
           </header>
 
           <p class="content">
-            <span class="emphasis">The DOM is simply an object. It is no different than the objects you create in OOP.</span> The DOM represents our entire HTML page. It provides, like objects do, properties and methods that allow us to <span class="emphasis">create</span>, <span class="emphasis">read</span>, <span class="emphasis">update</span>, and <span class="emphasis">delete</span> various pieces of our HTML page.
+            <span class="emphasis">As stated before, the DOM is simply an object. It is no different than the objects you create in OOP.</span> The DOM represents our entire HTML page. It provides, like objects do, properties and methods that allow us to <span class="emphasis">create</span>, <span class="emphasis">read</span>, <span class="emphasis">update</span>, and <span class="emphasis">delete</span> various pieces of our HTML page.
           </p>
 
           <p class="content">
-            <span class="emphasis">The DOM is not exclusive to JavaScript, but often the two are used in tandem.</span> The browser's JavaScript API provides a way for you to work with the DOM. On page load, the JavaScript API creates a new version of your API page. It first creates the document object then proceeds to populate it with childrend nodes that represent the other HTML elements you have on the page. Each of these is a different object type, but all inherit from the main object types, Element, Node, and EventTarget.
+            The <span class="emphasis">HTMLElement</span> is an <span class="emphasis">object</span> representing your HTML tag. The HTMLCollection is a collection of <span class="emphasis">HTMLElements</span>. The <span class="emphasis">NodeList</span> is a collection of every node. This includes all the HTMLElement nodes and Text nodes that may be apart of the collection.
           </p>
 
-          <p>
-            <small>The DOM Standard is a specification defined by the W3C on what components the browser API must provide to be DOM standard.</small>
-          </p>
+          <h3><strong>MOST THINGS IN JAVASCRIPT ARE OBJECTS. OBJECTS HAVE PROPERTIES AND METHODS. THIS IS A VERY <span class="emphasis">IMPORTANT</span> CONCEPT YOU NEED TO UNDERSTAND!</strong></h3>
         </main>
 
         <section>
           <header>
-            <h3>Selecting Elements of the DOM with CSS</h3>
+            <h3>Objects</h3>
           </header>
 
           <p class="content">
-            <span class="emphasis">Elements are simply HTML blocks.</span> &lt;body&gt; is an element. &lt;div&gt; is an element. &lt;a&gt; is an element. <span class="emphasis">All HTML tags are elements.</span>
+            In standard <span class="emphasis">Object Oriented Programming</span>, <strong>Classes</strong> are created as blueprints of attributes and functionality. The attributes and functionality are better known as <span class="emphasis">Properties</span> and <span class="emphasis">Methods</span>. If we want a subset of those methods an properties we can create a new class that inherits from the class and adjust the visibility using public, private, and protected visibility modifiers. This is the process in Java, PHP, C++, Ruby, and many other languages.
           </p>
 
           <p class="content">
-            You have likely selected elements in the past using CSS. You've had to use a combination of tags, IDs, class names, and attributes to walk the HTML page to select that one element you want to apply a style to. Perform the steps below in your <span class="emphasis">styles.css</span> file.
+            <span class="emphasis">HOWEVER</span>, JavaScript doesn't use classes, it uses object prototypes exclusively. (Yes I know about the ECMAScript CLASS structure, but this still uses prototyping under the hood). We can create our own objects easily:</span>
           </p>
-
-          <ol id="css-selector-examples">
-            <li>
-              <span>
-                Select and style this element using the tag selector.</span>
-            </li>
-
-            <li>
-              <span class="class-style">Select and style this element using the class selector.</span>
-            </li>
-
-            <li>
-              <span id="id-style">Select and style this element using the ID selector.</span>
-            </li>
-
-            <li>
-              <span data-css="attribute-style">Select and style this element using an attribute selector.</span>
-            </li>
+          
+          <ol id="objectExample">
+            <li>Create a new object called person.</li>
+            <li>Give you object a name, age, gender, and an array of interests.</li>
+            <li>Give your object a function called greeting and have it output a welcome message.</li>
+            <li>Give your object a function called bio and have it output their name, age, gender and interests in a logical sentence.</li>
+            <li>Call the greeting().</li>
+            <li>Call the bio().</li>
           </ol>
         </section>
 
         <section>
           <header>
-            <h3>Selecting Elements of the DOM with JavaScript</h3>
+            <h3>HTMLElement Properties and Methods</h3>
           </header>
 
           <p class="content">
-            When the DOM is created it creates an object for us called <span class="emphasis">document</span>. <span class="emphasis">document</span> is a representation of our entire HTML page. <span class="emphasis">document</span> is also our entry point when we want to select elements from our page. It has the same properties as any HTMLElement including the selection methods that we're going to look at below.
+            An <span class="emphasis">HTMLElement</span> is an object that represents your HTML tag. In HTML a tag describes its content. For example, &lt;article&gt; tells the browser that the content contained inside is semantically connected to an article. JavaScript doesn't care about semantics, but it does care about the tag name. Every HTML tag will become an HTMLElement in the DOM. In addition, the HTMLElement inherits properties and methods from various other objects available: <span class="emphasis">Element</span>, <span class="emphasis">Node</span>, and <span class="emphasis">EventTarget</span> objects. This means we have many properties and methods available to us to work with our HTMLElement.
           </p>
 
-          <p class="content">
-            <span class="emphasis">You can select HTML elements using CSS selectors in JavaScript.</span> The JavaScript document object provides a few ways to do this.
-          </p>
-
-          <p class="content">
-            The following are the older antiquated methods that are no longer commonly used, but good to know when working with legacy code. Perform these steps in your <span class="emphasis">main.js</span> file.
-          </p>
-
-          <ol id="js-selector-examples">
-            <li>
-              Select and store the H1 element into a variable using the method <span class="emphasis">document.getElementsByTagName()</span>.
-            </li>
-
-            <li>
-              <span id="select-ex-1">
-                Select and store this element into a variable using the method <span class="emphasis">document.getElementById()</span>.
-              </span>
-            </li>
-
-            <li>
-              <span class="select-ex-2">
-                Select and store these elements into a variable using the method <span class="emphasis">document.getElementsByClassName()</span>.
-              </span>
-            </li>
+          <ol start="7">
+            <li>Select and store the &lt;h1&gt; element.</li>
+            <li>Change the text content of the h1 element object.</li>
+            <li>Change the text colour of the h1 element object.</li>
+            <li>Make the h1 object text uppercase</li>
           </ol>
 
-          <p>
-            If you open your console, you will notice that the <span class="emphasis">document.getElementsByTagName()</span> and the <span class="emphasis">document.getElementsByClassName()</span> returned HTMLCollections. The <span class="emphasis">document.getElementById()</span> returned an HTMLSpanElement.
+          <p class="content">
+            The last step's syntax is an interesting demonstration of prototypal inheritance:
+
+            <br><br><span class="emphasis">
+              h1.textContent = h1.textContent.toUpperCase();
+            </span><br><br>
+            
+            h1 is an object. textContent is a property of h1. textContent's value is a string (which is actually a text node object). The text node object inherits from String. That is why we have access to the String method <span class="emphasis">.toUpperCase()</span>. This whole line contains a lot of objects giving us a lot of capability.
+          </p>
+
+          <p class="content">
+            This leads to another important concept in JavaScript: <span class="emphasis">A variable/property value can be of any type!</span> That includes <span class="emphasis">Numbers</span>, <span class="emphasis">Strings</span>, <span class="emphasis">Booleans</span>, <span class="emphasis">Arrays</span>, <span class="emphasis">Objects</span>, and <span class="emphasis">Functions</span>. That means a property of an object can have the value of an entire other object, and in regards to the DOM, often does!
           </p>
         </section>
 
         <section>
           <header>
-            <h3>HTMLElements & HTMLCollections</h3>
-          </header>
-
-          <p>
-            <span class="emphasis">Remember: ALL HTML tags are elements.</span> However, when we attempt to access them they can be returned in two different ways: <span class="emphasis">HTMLElement</span> or <span class="emphasis">HTMLCollection</span>. So what's the difference?
-          </p>
-
-          <p>
-            An HTMLElement represents an HTML element. This object contains many methods and properties that allow us to work with a specific HTML chunk. HTMLElements are returned when we select a unique element. What makes an element unique can vary with being as specific as an ID or as broad as the document order. That is why the older select methods return either a collection or an element. Because IDs are specific and unique, there can only be one element on the page with it. Classes and tag names are not unique, so we are returned a collection.
-          </p>
-
-          <p>
-            An HTMLCollection is an array of HTMLElements in order of placement in the document. Once you have the collection you can specifically select an HTML element from it by using an array index. For example, to select the first paragraph tag in this document you would run:
-
-            <br><br><span class="emphasis">
-              const ps = document.getElementsByTagName('p');<br>
-              let firstP = ps[0];
-            </span><br><br>
-
-            The first line returns all the paragraph elements in the document as an HTMLCollection. The second line selects the HTMLElement at the index of 0.
-            <br><span class="emphasis">REMEMBER ALL ARRAYS IN JAVASCRIPT ARE 0 (ZERO) INDEXED!</span>
-          </p>
-
-          <p>
-            The older methods are anitquated (old & useless) because they're not predictable. If I have one (which you should only ever have one) &lt;h1&gt; element on the page, selecting it by the tag name (.getElementsByTagName()) creates an extra step for me. In order for me to access the element, I have to use an index:
-
-            <br><br><span class="emphasis">
-              const h1s = document.getElementsByTagName('h1');<br>
-              let h1 = h1s[0];
-            </span><br><br>
-
-            This absurdity led to the better newer (well, since IE 8) methods of <span class="emphasis">.querySelector()</span> and <span class="emphasis">.querySelectorAll()</span>.
-          </p>
-        </section>
-
-        <section>
-          <header>
-            <h3>querySelector() & querySelectorAll()</h3>
+            <h3>HTMLCollection/NodeList Properties and Methods</h3>
           </header>
 
           <p class="content">
-            <span class="emphasis">Remember: An HTMLElement represents an HTML element</span>. An HTMLElement is an object created by DOM API that contains many methods and properties including .querySelector() and .querySelectorAll() which allows us to select other HTMLElements within scope the HTMLElement we call the method from.
+            A <span class="emphasis">NodeList</span> is an object. It acts much like an <span class="emphasis">Array</span> object as it contains a <span class="emphasis">zero-index</span> list of node elements. In this case, the list is entirely made up of HTMLElements and text nodes.
           </p>
 
           <p class="content">
-            <span class="emphasis">querySelector('css-selector statement') returns one (and ONLY EVER one) HTML element.</span> Whether you select by tag, class, ID, or attribute, you will always get back only the first instance the selector finds.
+            When you select multiple HTMLElements using <span class="emphasis">.querySelectorAll()</span> you will be returned a <span class="emphasis">NodeList</span> object. In addition, an individual <span class="emphasis">HTMLElement</span> will contain a property called <span class="emphasis">childNodes</span> that has a NodeList object as a value. If it isn't obvious, this NodeList contains all the children HTML elements under the selected element.
           </p>
 
-          <ol id="js-querySelector" start="4">
-            <li>
-              Select and store the h2 tag on the page using <strong>document.querySelector()</strong>.
-            </li>
-
-            <li>
-              <span id="qs-id">Select and store this element using the ID using <strong>document.querySelector()</strong>.</span>
-            </li>
-
-            <li>
-              <span class="qs-class">Select and store this element using the class using <strong>document.querySelector()</strong>.</span>
-              <span class="qs-class">Hi</span>
-              <span class="qs-class">Boo</span>
-            </li>
+          <ol id="css-selector-examples" start="11">
+            <li>Select and store the first &lt;ol&gt; element in the HTML document.</li>
+            <li>Select an store the property's value that contains a NodeList.</li>
+            <li>Select an store the property's value that contains an HTMLCollection.</li>
+            <li>What is the difference between the two collections values?</li>
           </ol>
 
           <p class="content">
-            <span class="emphasis">querySelectorAll('css-selector statement') returns a collection (and ALWAYS a collection) of HTML elements.</span> When you select by tag, class, ID, or attribute, you will always get back an array of HTML elements, even if there is only one element.
+            HTMLCollections and NodeList behave much like arrays, however there are some differences between each. For example, iterating through an HTMLCollection can be achieved with a <span class="emphasis">for loop</span>and a <span class="emphasis">for/of loop</span>, or by using a while/do while structure or recursion. It does not have access to the method <span class="emphasis">.forEach()</span> though. NodeLists can use any of the iterator methods including the <span class="emphasis">.forEach()</span> method. This is another reason that <span class="emphasis">.querySelectorAll()</span> is so cool as it <span class="emphasis">ALWAYS</span> returns a NodeList.
           </p>
 
-          <ol id="js-querySelectorAll" start="7">
-            <li>
-              Select and store all the article tags on the page using <strong>document.querySelectorAll()</strong>.
-            </li>
-
-            <li>
-              Select and store all the paragraph tags on the page using <strong>document.querySelectorAll()</strong>.
-            </li>
-
-            <li>
-              <span class="qs-class">Select and store all of these elements using the class using <strong>document.querySelectorAll()</strong>.</span>
-            </li>
-          </ol>
-        </section>
-
-        <section>
-          <header>
-            <h3>DOM Walking</h3>
-          </header>
-
-          <p>
-            <span class="emphasis">HTMLElements are objects that represent an HTML element on your HTML page (document).</span> HTMLElement inherits from the Document object (<span class="emphasis">document</span>). This means methods like <span class="emphasis">.querySelector()</span> and <span class="emphasis">.querySelectorAll()</span> are available to it. But that's not the best part! The best part is that they search within scope of the HTMLElement they're called from.
-          </p>
-
-          <p>
-            For example, if I wanted to grab all the &lt;li&gt; elements within an &lt;ol&gt; element, I can do the following:
-
-            <br><br><span class="emphasis">
-              const ol = document.querySelector('ol');<br>
-              let lis = ol.querySelectorAll('li');
-            </span><br><br>
-
-            On the first line we select the &lt;ol&gt; element in our document. Remember this will return the first instance of it only because we are using querySelector().<br>
-            Next we select all the &lt;li&gt;s within that &lt;ol&gt; element scope. That means we're not getting the &lt;li&gt;s from the other &lt;ol&gt; elements; only the one we selected.
-          </p>
-
-          <p>
-            The power of this is our ability to use a combination of HTMLElements and .querySelector() to walk our DOM and specifically access the HTMLElements we want. However we are not restricted to walking the DOM this way. We can also use simple HTML walking CSS selectors to do the same thing:
-
-            <br><br><span class="emphasis">
-              let lis = document.querySelectorAll('ol:first-child li');
-            </span><br><br>
-          </p>
-
-          <p>
-            Complete the steps below to select specific element(s) on the page:
-          </p>
-
-          <ol id="js-domWalker" start="10">
-            <li>
-              Using the document.querySelector() method, select the first &lt;ol&gt; on the page.
-            </li>
-
-            <li>
-              Using the &lt;ol&gt; HTMLElement you selected, now select all the &lt;li&gt; HTMLElements within it.
-            </li>
-
-            <li>
-              Next, select all the &lt;p&gt; HTMLElements within the first &lt;section&gt; HTMLElement using only a CSS Selector.
-            </li>
+          <ol start="15">
+            <li>Using a for/of loop, iterate through the children and output the text content of each child.</li>
+            <li>Using a .forEach() loop, iterate through the children and output the text content of each child.</li>
+            <li>Why do you think there are large gaps in between each child's output for Step 15?</li>
           </ol>
         </section>
       </article>

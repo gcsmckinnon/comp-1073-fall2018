@@ -1,33 +1,58 @@
-// Step 1 - Select and store the H1 element into a variable using the method document.getElementsByTagName().
-const byTagName = document.getElementsByTagName( 'h1' );
-console.log(byTagName.constructor.name);
+// Step 1 - Create a new object called person
+let person = {
+  // Step 2 - Give you object a name, age, gender, and an array of interests.
+  name: 'Shaun',
+  age: 39,
+  gender: 'male',
+  interests: ['comics', 'programming', 'movies'],
+  // Step 3 - Give your object a function called greeting and have it output a welcome message.
+  greeting: function () {
+    console.log(`Hello! My name is ${this.name} and I am ${this.age} years old.`);
+  },
+  // Step 4 - Give your object a function called bio and have it output their name, age, gender and interests in a logical sentence.
+  bio: function () {
+    console.log(`${this.name} is a ${this.age} year old ${this.gender} who is interested in ${this.interests.join(' and ')}.`);
+  }
+}
+console.log(person);
 
-// Step 2 - Select and store this element into a variable using the method document.getElementById().
-const byId = document.getElementById( 'select-ex-1' );
-console.log(byId.constructor.name);
+// Step 5 - Call the greeting().
+person.greeting();
 
-// Step 3 - Select and store these elements into a variable using the method document.getElementsByClassName().
-const byClassName = document.getElementsByClassName( 'select-ex-2' );
-console.log(byClassName.constructor.name);
+// Step 6 - Call the bio().
+person.bio();
 
-// Step 4 - Select and store the h2 tag on the page using document.querySelector().
+// Step 7 - Select and store the <h1> element.
+const h1 = document.querySelector('h1');
+console.log(h1);
 
+// Step 8 - Change the text content of the h1 element object.
+h1.textContent = "I changed this!";
 
-// Step 5 - Select and store this element using the ID using document.querySelector().
+// Step 9 - Change the text colour of the h1 element object.
+h1.style.color = "pink";
 
+// Step 10 - Make the h1 object text uppercase
+h1.textContent = h1.textContent.toUpperCase();
 
-// Step 6 - Select and store this element using the class using document.querySelector().
+// Step 11 - Select and store the first <ol> element in the HTML document.
+const firstOl = document.querySelector('ol');
+console.dir(firstOl);
 
+// Step 12 - Select an store the property's value that contains a NodeList.
+const children = firstOl.children;
+console.log(children);
 
-// Step 7 -  Select and store all the article tags on the page using document.querySelectorAll().
+// Step 13 - Select an store the property's value that contains an HTMLCollection.
+const childNodes = firstOl.childNodes;
+console.log(childNodes);
 
+// Step 14 - Using a for/of loop, iterate through the children and output the text content of each child.
+for (let child of children) {
+  console.log(child.textContent);
+}
 
-// Step 8 -  Select and store all the paragraph tags on the page using document.querySelectorAll().
-
-
-// Step 9 -  Select and store all of these elements using the class using document.querySelectorAll().
-
-
-// Step 10 - Using the document.querySelector() method, select the first <ol> on the page.
-// Step 11 - Using the <ol> HTMLElement you selected, now select all the <li> HTMLElements within it.
-// Step 12 - Next, select all the <p> HTMLElements within the first <section> HTMLElement using only a CSS Selector.
+// Step 15 - Using a .forEach() loop, iterate through the children and output the text content of each child.
+childNodes.forEach(function (node) {
+  console.log(node.textContent);
+});
