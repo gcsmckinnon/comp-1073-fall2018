@@ -58,6 +58,7 @@
             <li>Give your object a function called bio and have it output their name, age, gender and interests in a logical sentence.</li>
             <li>Call the greeting().</li>
             <li>Call the bio().</li>
+            <li>Output the name and age.</li>
           </ol>
         </section>
 
@@ -70,7 +71,7 @@
             An <span class="emphasis">HTMLElement</span> is an object that represents your HTML tag. In HTML a tag describes its content. For example, &lt;article&gt; tells the browser that the content contained inside is semantically connected to an article. JavaScript doesn't care about semantics, but it does care about the tag name. Every HTML tag will become an HTMLElement in the DOM. In addition, the HTMLElement inherits properties and methods from various other objects available: <span class="emphasis">Element</span>, <span class="emphasis">Node</span>, and <span class="emphasis">EventTarget</span> objects. This means we have many properties and methods available to us to work with our HTMLElement.
           </p>
 
-          <ol start="7">
+          <ol start="8">
             <li>Select and store the &lt;h1&gt; element.</li>
             <li>Change the text content of the h1 element object.</li>
             <li>Change the text colour of the h1 element object.</li>
@@ -105,7 +106,7 @@
             When you select multiple HTMLElements using <span class="emphasis">.querySelectorAll()</span> you will be returned a <span class="emphasis">NodeList</span> object. In addition, an individual <span class="emphasis">HTMLElement</span> will contain a property called <span class="emphasis">childNodes</span> that has a NodeList object as a value. If it isn't obvious, this NodeList contains all the children HTML elements under the selected element.
           </p>
 
-          <ol id="css-selector-examples" start="11">
+          <ol id="css-selector-examples" start="12">
             <li>Select and store the first &lt;ol&gt; element in the HTML document.</li>
             <li>Select an store the property's value that contains a NodeList.</li>
             <li>Select an store the property's value that contains an HTMLCollection.</li>
@@ -116,7 +117,7 @@
             HTMLCollections and NodeList behave much like arrays, however there are some differences between each. For example, iterating through an HTMLCollection can be achieved with a <span class="emphasis">for loop</span>and a <span class="emphasis">for/of loop</span>, or by using a while/do while structure or recursion. It does not have access to the method <span class="emphasis">.forEach()</span> though. NodeLists can use any of the iterator methods including the <span class="emphasis">.forEach()</span> method. This is another reason that <span class="emphasis">.querySelectorAll()</span> is so cool as it <span class="emphasis">ALWAYS</span> returns a NodeList.
           </p>
 
-          <ol start="15">
+          <ol start="16">
             <li>Using a for/of loop, iterate through the children and output the text content of each child.</li>
             <li>Using a .forEach() loop, iterate through the children and output the text content of each child.</li>
             <li>Why do you think there are large gaps in between each child's output for Step 15?</li>

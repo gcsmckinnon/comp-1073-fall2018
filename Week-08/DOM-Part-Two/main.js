@@ -22,37 +22,40 @@ person.greeting();
 // Step 6 - Call the bio().
 person.bio();
 
-// Step 7 - Select and store the <h1> element.
+// Step 7 - Output the name and age.
+console.log(person.name, person.age);
+
+// Step 8 - Select and store the <h1> element.
 const h1 = document.querySelector('h1');
 console.log(h1);
 
-// Step 8 - Change the text content of the h1 element object.
+// Step 9 - Change the text content of the h1 element object.
 h1.textContent = "I changed this!";
 
-// Step 9 - Change the text colour of the h1 element object.
+// Step 10 - Change the text colour of the h1 element object.
 h1.style.color = "pink";
 
-// Step 10 - Make the h1 object text uppercase
+// Step 11 - Make the h1 object text uppercase
 h1.textContent = h1.textContent.toUpperCase();
 
-// Step 11 - Select and store the first <ol> element in the HTML document.
+// Step 12 - Select and store the first <ol> element in the HTML document.
 const firstOl = document.querySelector('ol');
 console.dir(firstOl);
 
-// Step 12 - Select an store the property's value that contains a NodeList.
+// Step 13 - Select an store the property's value that contains a NodeList.
 const children = firstOl.children;
 console.log(children);
 
-// Step 13 - Select an store the property's value that contains an HTMLCollection.
+// Step 14 - Select an store the property's value that contains an HTMLCollection.
 const childNodes = firstOl.childNodes;
 console.log(childNodes);
 
-// Step 14 - Using a for/of loop, iterate through the children and output the text content of each child.
+// Step 16 - Using a for/of loop, iterate through the children and output the text content of each child.
 for (let child of children) {
   console.log(child.textContent);
 }
 
-// Step 15 - Using a .forEach() loop, iterate through the children and output the text content of each child.
+// Step 17 - Using a .forEach() loop, iterate through the children and output the text content of each child.
 childNodes.forEach(function (node) {
   console.log(node.textContent);
 });
