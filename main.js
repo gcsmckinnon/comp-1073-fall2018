@@ -8,7 +8,9 @@ const learningExamples = [
   ['Week-05/Library-Functions', 'Library Functions'],
   ['Week-05/Custom-Functions', 'Custom Functions'],
   ['Week-06/Events', 'Events'],
-  ['Week-08/DOM', 'The DOM'],
+  ['Week-08/DOM-Part-One', 'The DOM: Part One'],
+  ['Week-08/DOM-Part-Two', 'The DOM: Part Two'],
+  ['Week-08/DOM-Extra', 'The DOM: Extra'],
 ];
 
 const games = [
