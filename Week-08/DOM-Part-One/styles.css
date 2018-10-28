@@ -1,0 +1,19 @@
+/* Step 1 - Using the span tag name, style the element. */
+span {
+  color: #e74c3c;
+}
+
+/* Step 2 - Using the span class name, style the element */
+.class-style {
+  color: #f1c40f;
+}
+
+/* Step 3 - Using the span id name, style the element */
+#id-style {
+  color: #9b59b6;
+}
+
+/* Step 4 - Using the span data attribute, style the element */
+[data-css="attribute-style"] {
+  color: #3498db;
+}

@@ -8,6 +8,7 @@ const learningExamples = [
   ['Week-05/Library-Functions', 'Library Functions'],
   ['Week-05/Custom-Functions', 'Custom Functions'],
   ['Week-06/Events', 'Events'],
+  ['Week-08/DOM', 'The DOM'],
 ];
 
 const games = [
@@ -15,6 +16,7 @@ const games = [
   ['Week-02/PhraseGuess', 'Guess that Phrase'],
   ['Week-03/TicTacToe', 'Tic Tac Toe'],
   ['Week-06/Simon-Says', 'Simon Says'],
+  ['Week-08/Go-Fish', 'Go Fish'],
 ];
 
 [learningExamples, games].forEach(function (group) {
