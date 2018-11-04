@@ -1,0 +1,450 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / Third-Party CDNs
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", :integrity => "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", :rel => "stylesheet"}
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :integrity => "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", :rel => "stylesheet"}
+    %link{ href: "../prism/prism.css", rel: "stylesheet" }
+    %link{:href => "shaun-styles.css", :rel => "stylesheet"}
+    
+    / Custom CSS
+    %link{:href => "styles.css", :rel => "stylesheet"}
+
+    %title Object Prototypes: Part One
+
+  %body
+    .container
+      %header#main-header.mt-5
+        %h1 Object & Object Prototypes: Part One
+
+      %hr
+      %hr
+
+      %article
+        %main.my-5
+          %header#secondary-header.mb-4
+            %h2 Object Recap
+            %hr
+
+          %row
+            %p.content
+              %span.emphasis<>
+                Objects
+              , like in most languages, are a way for us to encapsulate code under one idea. Generally an object is best described using a 
+              %em noun
+              (a &nbsp;
+              %span.emphasis<>
+                person
+              ,&nbsp;
+              %span.emphasis<>
+                place
+              ,&nbsp;or&nbsp;
+              %span.emphasis<>
+                thing
+              \).
+            
+            %p.content
+              %strong.emphasis Properties
+              are basically descriptive words
+              %em (adjectives)
+              that can be used to define properties or attributes about an object.
+              %strong.emphasis<>
+                Below
+              , we see an object defined with 3 properties:
+              %span.emphasis<>
+                name
+              , &nbsp;
+              %span.emphasis<>
+                age
+              , and&nbsp;
+              %span.emphasis<>
+                interests
+              \.
+
+            %pre
+              %code.language-javascript
+                :plain
+                  let person = {
+                    name: "Shaun",
+                    age: 39,
+                    interests: ["programming", "Diablo", "cage fighting"]
+                  }
+            
+            %p.content
+              %strong
+                Methods
+              are actions an object can perform. For example an object of type
+              %span.emphasis
+                Shaun
+              will likely be able to&nbsp;
+              %span.emphasis<>
+                talk
+              &nbsp;and&nbsp;
+              %span.emphasis<>
+                walk
+              \.      
+
+            %pre
+              %code.language-javascript
+                :plain
+                  let person = {
+                    name: "Shaun",
+                    age: 39,
+                    interests: ["programming", "Diablo", "cage fighting"]
+                    talk: function () {
+                      console.log("I'm 39");
+                    },
+                    walk: function () {
+                      posX += 5;
+                    }
+                  }              
+
+        %section
+          %header
+            %h3 JavaScript Object Properties
+            %hr
+
+          %p.content
+            %span.emphasis Objects
+            are an integral part to JavaScript. In JavaScript,
+            %span.emphasis ALMOST
+            everything is an object. That's very cool if you consider that objects give you properties and methods. It's like having
+            %em extra functionality
+            on every variable, function, string, number, and array (for example) that you place in your code!
+          
+          %p.content
+            %span.emphasis Let's look at what properties a variable with a string has:
+
+          %pre
+            %code.language-javascript
+              let name = "Shaun McKinnon";
+              let nameProperties = Object.getOwnPropertyNames(name);
+              console.log(nameProperties.join(', '));
+              // "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "length"
+
+          %p.content
+            So we returned a block of numbers and "length". The block of numbers represents the 
+            %span.emphasis
+              character indexes 
+            in our string. The
+            %span.emphasis length
+            property is the total character count of our string. If we wanted to access a character using one of the index properties, we can simply do this using one of the numbers.
+
+          %pre
+            %code.language-javascript
+              console.log(name[1]); // "h"
+              console.log(name[11]); // "n"
+              console.log(name["length"]); // 1
+          
+          %p.content
+            Pretty cool eh? But we're not done. Let's look at the properties from our 
+            %span.emphasis person
+            object:
+
+          %ol{ start: 4 }
+            %li
+              .inst Create the following object:
+              %pre
+                %code.language-javascript
+                  :plain
+                    let person = {
+                      name: "Shaun",
+                      age: 39,
+                      interests: ["programming", "Diablo", "cage fighting"],
+                      talk: function () {
+                        console.log("I'm 39");
+                      },
+                      walk: function () {
+                        posX += 5;
+                      }
+                    }
+            %li
+              .inst Output all the properties on the object
+              %pre
+                %code.language-javascript
+                  :plain
+                    let objProps = Object.getOwnPropertyNames(person);
+                    console.log(objProps.join(', '));
+                    // name, age, interests, talk, walk
+          
+          %p.content
+            Hold the phone:
+            %br
+            %span.emphasis TALK AND WALK AREN'T PROPERTIES!!! They're methods!
+            %br
+            But they are! Properties are simply named values. No different than a variable. The value can be any data type: string, number, array, function, or even another object.
+        
+        %section
+          %header
+            %h3 Accessing Object Properties
+            %hr
+
+          %p.content
+            %span.emphasis Externally:
+            %br
+            We have 2 options for accessing an object property. We can using the .dot syntax:
+          %pre
+            %code.language-javascript
+              console.log(person.name);
+          %p 
+            Or, we can using the ["index"] syntax:
+
+          %pre
+            %code.language-javascript
+              console.log(person["name"]);
+
+          %p
+            Make a note though that .dot syntax is without any quotes and ["index"] syntax is. The cool thing about ["index"] syntax is you now you have the ability to dynamically access object properties if you needed to.
+            %br
+            %span.emphasis Let's populate the following structure:
+
+          %table.person
+            %tr
+              %th Name:
+              %td#personName
+            %tr
+              %th Age:
+              %td#personAge
+            %tr
+              %th Interests:
+              %td#personInterests
+            %tr
+              %th Bio:
+              %td#personBio
+
+
+          %ol{ start: 3 }
+            %li
+              .inst Set the #personName, #personAge, and #personInterests text content to our the corresponding object properties
+              %pre
+                %code.language-javascript
+                  :plain
+                    const personName = document.querySelector('#personName');
+                    personName.textContent = person.name;
+
+                    const personAge = document.querySelector('#personAge');
+                    personAge.textContent = person.age;
+
+                    const personInterests = document.querySelector('#personInterests');
+                    personInterests.textContent = person.interests.join(', ');
+
+          %p.content
+            Accessing the functions is done the same way as accessing any property. The difference lies when you want to execute() them.  You use the 
+            %span.emphasis (parenthesis) 
+            to tell the JavaScript interpreter to 
+            %span.emphasis call the function
+            \.
+            
+          %ol{ start: 4 }
+            %li
+              .inst Create a new function definition for the property 
+              %span.emphasis bio
+              in the 
+              %span.emphasis person
+              object
+              %pre
+                %code.language-javascript
+                  :plain
+                    bio: function () {
+                      return `Hello I am Shaun and I'm a 39 year old computer programmer!`;
+                    }
+            %li
+              .inst Set the #personBio text content to return value of the bio property function
+              %pre
+                %code.language-javascript
+                  const personBio = document.querySelector('#personBio');
+                  personBio.textContent = person.bio();
+
+
+          %p
+            %span.emphasis Internally:
+            %br
+            Accessing properties within the object (internally) involves using the very important keyword 
+            %span.emphasis<>
+              &nbsp;this
+            \. In objects 
+            %strong this
+            represents the owner object which in this case is 
+            %span.emphasis<>
+              &nbsp;person
+            \.
+
+          %p
+            We can see this by console logging
+            %strong this
+            but we will need to do it within the object. Let's add it to our 
+            %strong bio method
+            as we're already calling it:
+
+          %pre
+            %code.language-javascript
+              :plain
+                bio: function () {
+                  console.log(this);
+                  return `Hello I am Shaun and I'm a 39 year old computer programmer!`;
+                }
+                // {name: "Shaun", age: 39, interests: Array(3), talk: f, walk: f, bio: f}
+          
+          %p.content
+            As you can see, 
+            %span.emphasis this
+            %strong
+              %em IS
+            our 
+            %span.emphasis person
+            object. You can see all the properties, and, if you're outputting to the console, you can click the arrows to div into what each property is.
+
+          %p.content
+            So, if we wanted to DRY (Don't Repeat Yourself) our 
+            %span.emphasis bio
+            function definition, we could simply use 
+            %span.emphasis this
+            to reference our properties:
+
+          %ol{ start: 6 }
+            %li
+              .inst
+                Using the 
+                %span.emphasis this
+                keyword, replace "Shaun", 39, and "computer programmer" with the correct object property values
+              %pre
+                %code.language-javascript
+                  :plain
+                    bio: function () {
+                      console.log(this);
+                      return `Hello I am ${this.name} and I'm a ${this.age} year old ${this.interests[0]}`;
+                    }
+
+          %p.content
+            Because properties can 
+            %span.emphasis have any value type
+            they can hold function defintions. We saw the power of 
+            %span.emphasis this
+            before with simple values. What if our values are functions? Can we still use
+            %strong<>
+              &nbsp;this
+            \?
+            %br
+            Yes! Yes we can!
+
+          %ol{ start: 7 }
+            %li
+              .inst
+                First, modify the 
+                %span.emphasis bio method
+                so it says "Hello, I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}."
+              %pre
+                %code.language-javascript
+                  :plain
+                    bio: function () {
+                      console.log(this);
+                      return `Hello I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}`;
+                    }
+            %li
+              .inst
+                Next, add a 
+                %span.emphasis toHTML method
+                that creates a new dif and adds it to page based on a selector you pass it
+              %pre
+                %code.language-javascript
+                  :plain
+                    toHTML: function (selector) {
+                      let div = document.createElement('div');
+                      div.textContent = this.bio();
+                      document.querySelector(selector).append(div);
+                    }
+            %li
+              .inst
+                Last, call the new toHTML method externally passing '#toHTMLBio' as the argument
+              %pre
+                %code.language-javascript
+                  :plain
+                    person.toHTML('#toHTMLBio');
+              #toHTMLBio
+
+        %section
+          %header
+            %h3 Creating New Object Properties
+            %hr
+
+          %p.content
+            Up to this point, we've been creating object properties by simply adding to our 
+            %span.emphasis person
+            object structure. It now currently resembles this:
+
+          %pre
+            %code.language-javascript
+              :plain
+                let person = {
+                  name: "Shaun",
+                  age: 39,
+                  interests: ["programming", "Diablo", "cage fighting"],
+                  talk: function () {
+                    console.log("I'm 39");
+                  },
+                  walk: function (s) {
+                    posX += 5;
+                  },
+                  toHTML: function (selector) {
+                    let div = document.createElement('div');
+                    div.textContent = this.bio();
+                    document.querySelector(selector).append(div);
+                  },
+                  bio: function () {
+                    console.log(this);
+                    return `Hello I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}`;
+                  }
+                }
+
+          %p.content
+            This is a lot to maintain, and, to be honest, not practical. Sometimes you may want to create a new property based on a condition. Or a bunch of new properties using a loop. Because JavaScript is a loosey goosey, duck-typed
+            %span.emphasis (if it walks like a duck and quacks like a duck it must be ...),
+            we have the ability to add a new property whenever we want.
+
+          %ol
+            %li
+              .inst
+                Add a new property called 
+                %span.emphasis hasPets
+                and set it's value to true (if you have pets) or false (if you don't)
+              %pre
+                %code.language-javascript
+                  :plain
+                    person.hasPets = true;
+            %li
+              .inst
+                Add a new property called 
+                %span.emphasis petCount
+                and set it's value to the number of pets you have (0 if you have none)
+              %pre
+                %code.language-javascript
+                  :plain
+                    person.petCount = 3;
+            %li
+              .inst
+                Add a new property called 
+                %span.emphasis petToHTML
+                and set it's value to the following function defintion
+              %pre
+                %code.language-javascript
+                  :plain
+                    person.petCount = 3;
+            %li
+              .inst
+                Last, call the new petToHTML method passing '#doYouGotPets' as the argument
+              %pre
+                %code.language-javascript
+                  :plain
+                    person.petToHTML('#doYouGotPets');
+              #doYouGotPets
+
+    %footer
+      &copy;2018 - Shaun McKinnon
+    
+    / Third-Party CDNs
+    %script{:crossorigin => "anonymous", :integrity => "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", :src => "https://code.jquery.com/jquery-3.3.1.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"}
+    %script{ src: "../prism/prism.js" }
+    
+    / Custom JS
+    %script{:src => "main.js"}

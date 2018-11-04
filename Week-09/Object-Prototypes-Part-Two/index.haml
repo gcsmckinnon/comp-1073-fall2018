@@ -1,0 +1,118 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / Third-Party CDNs
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", :integrity => "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", :rel => "stylesheet"}
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :integrity => "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", :rel => "stylesheet"}
+    %link{ href: "../prism/prism.css", rel: "stylesheet" }
+    %link{:href => "shaun-styles.css", :rel => "stylesheet"}
+    
+    / Custom CSS
+    %link{:href => "styles.css", :rel => "stylesheet"}
+
+    %title Object Prototypes: Part One
+
+  %body
+    .container
+      %header#main-header.mt-5
+        %h1 Object & Object Prototypes: Part Two
+
+      %hr
+      %hr
+
+      %article
+        %main.my-5
+          %header#secondary-header.mb-4
+            %h2 Object Recap
+            %hr
+
+          %row
+            %p.content
+              %span.emphasis<>
+                            
+
+        %section
+          %header
+            %h3 Object Prototypes
+            %hr
+
+          %p.content
+            %span.emphasis Objects
+            are an integral part to JavaScript. In JavaScript,
+            %span.emphasis ALMOST
+            everything is an object. That's very cool if you consider that objects give you properties and methods. It's like having
+            %em extra functionality
+            on every variable, function, string, number, and array (for example) that you place in your code!
+          
+          %p.content
+            %span.emphasis Let's look at what properties a variable with a string has:
+
+          %pre
+            %code.language-javascript
+              let name = "Shaun McKinnon";
+              let nameProperties = Object.getOwnPropertyNames(name);
+              console.log(nameProperties.join(', '));
+              // "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "length"
+
+          %p.content
+            So we returned a block of numbers and "length". The block of numbers represents the 
+            %span.emphasis
+              character indexes 
+            in our string. The
+            %span.emphasis length
+            property is the total character count of our string. If we wanted to access a character using one of the index properties, we can simply do this using one of the numbers.
+
+          %pre
+            %code.language-javascript
+              console.log(name[1]); // "h"
+              console.log(name[11]); // "n"
+              console.log(name["length"]); // 1
+          
+          %p.content
+            Pretty cool eh? But we're not done. Let's look at the properties from our 
+            %span.emphasis person
+            object:
+
+          %ol{ start: 4 }
+            %li
+              .inst Create the following object:
+              %pre
+                %code.language-javascript
+                  :plain
+                    let person = {
+                      name: "Shaun",
+                      age: 39,
+                      interests: ["programming", "Diablo", "cage fighting"],
+                      talk: function () {
+                        console.log("I'm 39");
+                      },
+                      walk: function () {
+                        posX += 5;
+                      }
+                    }
+            %li
+              .inst Output all the properties on the object
+              %pre
+                %code.language-javascript
+                  :plain
+                    let objProps = Object.getOwnPropertyNames(person);
+                    console.log(objProps.join(', '));
+                    // name, age, interests, talk, walk
+          
+          %p.content
+            Hold the phone:
+            %br
+            %span.emphasis TALK AND WALK AREN'T PROPERTIES!!! They're methods!
+            %br
+            But they are! Properties are simply named values. No different than a variable. The value can be any data type: string, number, array, function, or even another object.
+
+    %footer
+      &copy;2018 - Shaun McKinnon
+    
+    / Third-Party CDNs
+    %script{:crossorigin => "anonymous", :integrity => "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", :src => "https://code.jquery.com/jquery-3.3.1.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"}
+    %script{ src: "../prism/prism.js" }
+    
+    / Custom JS
+    %script{:src => "main.js"}

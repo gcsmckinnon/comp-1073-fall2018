@@ -1,0 +1,80 @@
+//colors
+$color_athens_gray_approx: #ecf0f1;
+$white: #fff;
+$color_flush_mahogany_approx: #c0392b;
+$color_pickled_bluewood_approx: #34495e;
+$color_curious_blue_approx: #3498db;
+
+body {
+  background: $color_athens_gray_approx;
+}
+pre, code {
+  white-space: pre-wrap;
+}
+* {
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: 0 2px 3px $white;
+}
+h1 {
+  color: $color_pickled_bluewood_approx;
+  font-weight: bold;
+  font-size: 4em;
+}
+section {
+  border-left: 30px solid $color_flush_mahogany_approx;
+  padding-left: 2em;
+  width: 800px;
+}
+h3 {
+  margin-top: 2em;
+}
+p {
+  margin-left: 2em;
+}
+.example {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: bold;
+  color: $color_curious_blue_approx;
+}
+.example::before {
+  content: "Output: ";
+  color: $color_flush_mahogany_approx;
+}
+.theAwesomeClass {
+  display: block;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  text-align: center;
+  p {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    color: inherit;
+    margin: inherit;
+  }
+}
+footer {
+  height: 100px;
+  background-color: $color_pickled_bluewood_approx;
+  margin-top: 4em;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span.emphasis {
+  font-style: oblique;
+  font-weight: bold;
+  color: $color_flush_mahogany_approx;
+}
+#js-selector-examples span {
+  color: inherit;
+}
+#js-querySelector span {
+  color: inherit;
+}
+#js-querySelectorAll span {
+  color: inherit;
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- Third-Party CDNs -->
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' rel='stylesheet'>
+<link href='../prism/prism.css' rel='stylesheet'>
+<link href='shaun-styles.css' rel='stylesheet'>
+<!-- Custom CSS -->
+<link href='styles.css' rel='stylesheet'>
+<title>Object Prototypes: Part One</title>
+</head>
+<body>
+<div class='container'>
+<header class='mt-5' id='main-header'>
+<h1>Object & Object Prototypes: Part One</h1>
+</header>
+<hr>
+<hr>
+<article>
+<main class='my-5'>
+<header class='mb-4' id='secondary-header'>
+<h2>Object Recap</h2>
+<hr>
+</header>
+<row>
+<p class='content'><span class='emphasis'>Objects</span>, like in most languages, are a way for us to encapsulate code under one idea. Generally an object is best described using a
+<em>noun</em>
+(a &nbsp;<span class='emphasis'>person</span>,&nbsp;<span class='emphasis'>place</span>,&nbsp;or&nbsp;<span class='emphasis'>thing</span>).
+</p>
+<p class='content'>
+<strong class='emphasis'>Properties</strong>
+are basically descriptive words
+<em>(adjectives)</em>
+that can be used to define properties or attributes about an object.<strong class='emphasis'>Below</strong>, we see an object defined with 3 properties:<span class='emphasis'>name</span>, &nbsp;<span class='emphasis'>age</span>, and&nbsp;<span class='emphasis'>interests</span>.
+</p>
+<pre><code class='language-javascript'>let person = {
+  name: "Shaun",
+  age: 39,
+  interests: ["programming", "Diablo", "cage fighting"]
+}</code></pre>
+<p class='content'>
+<strong>
+Methods
+</strong>
+are actions an object can perform. For example an object of type
+<span class='emphasis'>
+Shaun
+</span>
+will likely be able to&nbsp;<span class='emphasis'>talk</span>&nbsp;and&nbsp;<span class='emphasis'>walk</span>.
+</p>
+<pre><code class='language-javascript'>let person = {
+  name: "Shaun",
+  age: 39,
+  interests: ["programming", "Diablo", "cage fighting"]
+  talk: function () {
+    console.log("I'm 39");
+  },
+  walk: function () {
+    posX += 5;
+  }
+}</code></pre>
+</row>
+</main>
+<section>
+<header>
+<h3>JavaScript Object Properties</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>Objects</span>
+are an integral part to JavaScript. In JavaScript,
+<span class='emphasis'>ALMOST</span>
+everything is an object. That's very cool if you consider that objects give you properties and methods. It's like having
+<em>extra functionality</em>
+on every variable, function, string, number, and array (for example) that you place in your code!
+</p>
+<p class='content'>
+<span class='emphasis'>Let's look at what properties a variable with a string has:</span>
+</p>
+<pre><code class='language-javascript'>let name = "Shaun McKinnon";
+let nameProperties = Object.getOwnPropertyNames(name);
+console.log(nameProperties.join(', '));
+<!-- / "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "length" --></code></pre>
+<p class='content'>
+So we returned a block of numbers and "length". The block of numbers represents the
+<span class='emphasis'>
+character indexes
+</span>
+in our string. The
+<span class='emphasis'>length</span>
+property is the total character count of our string. If we wanted to access a character using one of the index properties, we can simply do this using one of the numbers.
+</p>
+<pre><code class='language-javascript'>console.log(name[1]); // "h"
+console.log(name[11]); // "n"
+console.log(name["length"]); // 1</code></pre>
+<p class='content'>
+Pretty cool eh? But we're not done. Let's look at the properties from our
+<span class='emphasis'>person</span>
+object:
+</p>
+<ol start='4'>
+<li>
+<div class='inst'>Create the following object:</div>
+<pre><code class='language-javascript'>let person = {
+  name: "Shaun",
+  age: 39,
+  interests: ["programming", "Diablo", "cage fighting"],
+  talk: function () {
+    console.log("I'm 39");
+  },
+  walk: function () {
+    posX += 5;
+  }
+}</code></pre>
+</li>
+<li>
+<div class='inst'>Output all the properties on the object</div>
+<pre><code class='language-javascript'>let objProps = Object.getOwnPropertyNames(person);
+console.log(objProps.join(', '));
+// name, age, interests, talk, walk</code></pre>
+</li>
+</ol>
+<p class='content'>
+Hold the phone:
+<br>
+<span class='emphasis'>TALK AND WALK AREN'T PROPERTIES!!! They're methods!</span>
+<br>
+But they are! Properties are simply named values. No different than a variable. The value can be any data type: string, number, array, function, or even another object.
+</p>
+</section>
+<section>
+<header>
+<h3>Accessing Object Properties</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>Externally:</span>
+<br>
+We have 2 options for accessing an object property. We can using the .dot syntax:
+</p>
+<pre><code class='language-javascript'>console.log(person.name);</code></pre>
+<p>
+Or, we can using the ["index"] syntax:
+</p>
+<pre><code class='language-javascript'>console.log(person["name"]);</code></pre>
+<p>
+Make a note though that .dot syntax is without any quotes and ["index"] syntax is. The cool thing about ["index"] syntax is you now you have the ability to dynamically access object properties if you needed to.
+<br>
+<span class='emphasis'>Let's populate the following structure:</span>
+</p>
+<table class='person'>
+<tr>
+<th>Name:</th>
+<td id='personName'></td>
+</tr>
+<tr>
+<th>Age:</th>
+<td id='personAge'></td>
+</tr>
+<tr>
+<th>Interests:</th>
+<td id='personInterests'></td>
+</tr>
+<tr>
+<th>Bio:</th>
+<td id='personBio'></td>
+</tr>
+</table>
+<ol start='3'>
+<li>
+<div class='inst'>Set the #personName, #personAge, and #personInterests text content to our the corresponding object properties</div>
+<pre><code class='language-javascript'>const personName = document.querySelector('#personName');
+personName.textContent = person.name;
+
+const personAge = document.querySelector('#personAge');
+personAge.textContent = person.age;
+
+const personInterests = document.querySelector('#personInterests');
+personInterests.textContent = person.interests.join(', ');</code></pre>
+</li>
+</ol>
+<p class='content'>
+Accessing the functions is done the same way as accessing any property. The difference lies when you want to execute() them.  You use the
+<span class='emphasis'>(parenthesis)</span>
+to tell the JavaScript interpreter to
+<span class='emphasis'>call the function</span>
+.
+</p>
+<ol start='4'>
+<li>
+<div class='inst'>Create a new function definition for the property</div>
+<span class='emphasis'>bio</span>
+in the
+<span class='emphasis'>person</span>
+object
+<pre><code class='language-javascript'>bio: function () {
+  return `Hello I am Shaun and I'm a 39 year old computer programmer!`;
+}</code></pre>
+</li>
+<li>
+<div class='inst'>Set the #personBio text content to return value of the bio property function</div>
+<pre><code class='language-javascript'>const personBio = document.querySelector('#personBio');
+personBio.textContent = person.bio();</code></pre>
+</li>
+</ol>
+<p>
+<span class='emphasis'>Internally:</span>
+<br>
+Accessing properties within the object (internally) involves using the very important keyword<span class='emphasis'>&nbsp;this</span>. In objects
+<strong>this</strong>
+represents the owner object which in this case is<span class='emphasis'>&nbsp;person</span>.
+</p>
+<p>
+We can see this by console logging
+<strong>this</strong>
+but we will need to do it within the object. Let's add it to our
+<strong>bio method</strong>
+as we're already calling it:
+</p>
+<pre><code class='language-javascript'>bio: function () {
+  console.log(this);
+  return `Hello I am Shaun and I'm a 39 year old computer programmer!`;
+}
+// {name: "Shaun", age: 39, interests: Array(3), talk: f, walk: f, bio: f}</code></pre>
+<p class='content'>
+As you can see,
+<span class='emphasis'>this</span>
+<strong>
+<em>IS</em>
+</strong>
+our
+<span class='emphasis'>person</span>
+object. You can see all the properties, and, if you're outputting to the console, you can click the arrows to div into what each property is.
+</p>
+<p class='content'>
+So, if we wanted to DRY (Don't Repeat Yourself) our
+<span class='emphasis'>bio</span>
+function definition, we could simply use
+<span class='emphasis'>this</span>
+to reference our properties:
+</p>
+<ol start='6'>
+<li>
+<div class='inst'>
+Using the
+<span class='emphasis'>this</span>
+keyword, replace "Shaun", 39, and "computer programmer" with the correct object property values
+</div>
+<pre><code class='language-javascript'>bio: function () {
+  console.log(this);
+  return `Hello I am ${this.name} and I'm a ${this.age} year old ${this.interests[0]}`;
+}</code></pre>
+</li>
+</ol>
+<p class='content'>
+Because properties can
+<span class='emphasis'>have any value type</span>
+they can hold function defintions. We saw the power of
+<span class='emphasis'>this</span>
+before with simple values. What if our values are functions? Can we still use<strong>&nbsp;this</strong>?
+<br>
+Yes! Yes we can!
+</p>
+<ol start='7'>
+<li>
+<div class='inst'>
+First, modify the
+<span class='emphasis'>bio method</span>
+so it says "Hello, I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}."
+</div>
+<pre><code class='language-javascript'>bio: function () {
+  console.log(this);
+  return `Hello I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}`;
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+Next, add a
+<span class='emphasis'>toHTML method</span>
+that creates a new dif and adds it to page based on a selector you pass it
+</div>
+<pre><code class='language-javascript'>toHTML: function (selector) {
+  let div = document.createElement('div');
+  div.textContent = this.bio();
+  document.querySelector(selector).append(div);
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+Last, call the new toHTML method externally passing '#toHTMLBio' as the argument
+</div>
+<pre><code class='language-javascript'>person.toHTML('#toHTMLBio');</code></pre>
+<div id='toHTMLBio'></div>
+</li>
+</ol>
+</section>
+<section>
+<header>
+<h3>Creating New Object Properties</h3>
+<hr>
+</header>
+<p class='content'>
+Up to this point, we've been creating object properties by simply adding to our
+<span class='emphasis'>person</span>
+object structure. It now currently resembles this:
+</p>
+<pre><code class='language-javascript'>let person = {
+  name: "Shaun",
+  age: 39,
+  interests: ["programming", "Diablo", "cage fighting"],
+  talk: function () {
+    console.log("I'm 39");
+  },
+  walk: function (s) {
+    posX += 5;
+  },
+  toHTML: function (selector) {
+    let div = document.createElement('div');
+    div.textContent = this.bio();
+    document.querySelector(selector).append(div);
+  },
+  bio: function () {
+    console.log(this);
+    return `Hello I am ${this.name} and I'm a ${this.age} year old interested in ${this.interests[0]}`;
+  }
+}</code></pre>
+<p class='content'>
+This is a lot to maintain, and, to be honest, not practical. Sometimes you may want to create a new property based on a condition. Or a bunch of new properties using a loop. Because JavaScript is a loosey goosey, duck-typed
+<span class='emphasis'>(if it walks like a duck and quacks like a duck it must be ...),</span>
+we have the ability to add a new property whenever we want.
+</p>
+<ol>
+<li>
+<div class='inst'>
+Add a new property called
+<span class='emphasis'>hasPets</span>
+and set it's value to true (if you have pets) or false (if you don't)
+</div>
+<pre><code class='language-javascript'>person.hasPets = true;</code></pre>
+</li>
+<li>
+<div class='inst'>
+Add a new property called
+<span class='emphasis'>petCount</span>
+and set it's value to the number of pets you have (0 if you have none)
+</div>
+<pre><code class='language-javascript'>person.petCount = 3;</code></pre>
+</li>
+<li>
+<div class='inst'>
+Add a new property called
+<span class='emphasis'>petToHTML</span>
+and set it's value to the following function defintion
+</div>
+<pre><code class='language-javascript'>person.petCount = 3;</code></pre>
+</li>
+<li>
+<div class='inst'>
+Last, call the new petToHTML method passing '#doYouGotPets' as the argument
+</div>
+<pre><code class='language-javascript'>person.petToHTML('#doYouGotPets');</code></pre>
+<div id='doYouGotPets'></div>
+</li>
+</ol>
+</section>
+</article>
+</div>
+<footer>
+&copy;2018 - Shaun McKinnon
+</footer>
+<!-- Third-Party CDNs -->
+<script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script crossorigin='anonymous' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src='../prism/prism.js'></script>
+<!-- Custom JS -->
+<script src='main.js'></script>
+</body>
+</html>

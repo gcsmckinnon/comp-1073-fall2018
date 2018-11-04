@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- Third-Party CDNs -->
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' rel='stylesheet'>
+<link href='../prism/prism.css' rel='stylesheet'>
+<link href='shaun-styles.css' rel='stylesheet'>
+<!-- Custom CSS -->
+<link href='styles.css' rel='stylesheet'>
+<title>Object Prototypes: Part One</title>
+</head>
+<body>
+<div class='container'>
+<header class='mt-5' id='main-header'>
+<h1>Object & Object Prototypes: Part Two</h1>
+</header>
+<hr>
+<hr>
+<article>
+<main class='my-5'>
+<header class='mb-4' id='secondary-header'>
+<h2>Object Recap</h2>
+<hr>
+</header>
+<row>
+<p class='content'><span class='emphasis'></span></p>
+</row>
+</main>
+<section>
+<header>
+<h3>Object Prototypes</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>Objects</span>
+are an integral part to JavaScript. In JavaScript,
+<span class='emphasis'>ALMOST</span>
+everything is an object. That's very cool if you consider that objects give you properties and methods. It's like having
+<em>extra functionality</em>
+on every variable, function, string, number, and array (for example) that you place in your code!
+</p>
+<p class='content'>
+<span class='emphasis'>Let's look at what properties a variable with a string has:</span>
+</p>
+<pre><code class='language-javascript'>let name = "Shaun McKinnon";
+let nameProperties = Object.getOwnPropertyNames(name);
+console.log(nameProperties.join(', '));
+<!-- / "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "length" --></code></pre>
+<p class='content'>
+So we returned a block of numbers and "length". The block of numbers represents the
+<span class='emphasis'>
+character indexes
+</span>
+in our string. The
+<span class='emphasis'>length</span>
+property is the total character count of our string. If we wanted to access a character using one of the index properties, we can simply do this using one of the numbers.
+</p>
+<pre><code class='language-javascript'>console.log(name[1]); // "h"
+console.log(name[11]); // "n"
+console.log(name["length"]); // 1</code></pre>
+<p class='content'>
+Pretty cool eh? But we're not done. Let's look at the properties from our
+<span class='emphasis'>person</span>
+object:
+</p>
+<ol start='4'>
+<li>
+<div class='inst'>Create the following object:</div>
+<pre><code class='language-javascript'>let person = {
+  name: "Shaun",
+  age: 39,
+  interests: ["programming", "Diablo", "cage fighting"],
+  talk: function () {
+    console.log("I'm 39");
+  },
+  walk: function () {
+    posX += 5;
+  }
+}</code></pre>
+</li>
+<li>
+<div class='inst'>Output all the properties on the object</div>
+<pre><code class='language-javascript'>let objProps = Object.getOwnPropertyNames(person);
+console.log(objProps.join(', '));
+// name, age, interests, talk, walk</code></pre>
+</li>
+</ol>
+<p class='content'>
+Hold the phone:
+<br>
+<span class='emphasis'>TALK AND WALK AREN'T PROPERTIES!!! They're methods!</span>
+<br>
+But they are! Properties are simply named values. No different than a variable. The value can be any data type: string, number, array, function, or even another object.
+</p>
+</section>
+</article>
+</div>
+<footer>
+&copy;2018 - Shaun McKinnon
+</footer>
+<!-- Third-Party CDNs -->
+<script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script crossorigin='anonymous' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src='../prism/prism.js'></script>
+<!-- Custom JS -->
+<script src='main.js'></script>
+</body>
+</html>
