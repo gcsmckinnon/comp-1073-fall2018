@@ -9,47 +9,47 @@
 	],
 "creatorBuild": "28905",
 "files": {
-	"/Object-Prototypes-Part-One/index.haml": {
+	"/Objects-Part-One/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/index.html",
+		"oAP": "/Objects-Part-One/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Object-Prototypes-Part-One/index.html": {
+	"/Objects-Part-One/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/index.html",
+		"oAP": "/Objects-Part-One/index.html",
 		"oF": 0
 		},
-	"/Object-Prototypes-Part-One/main.js": {
+	"/Objects-Part-One/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "/Object-Prototypes-Part-One/main-min.js",
+		"oAP": "/Objects-Part-One/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Object-Prototypes-Part-One/shaun-styles.css": {
+	"/Objects-Part-One/shaun-styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/shaun-styles-min.css",
+		"oAP": "/Objects-Part-One/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Object-Prototypes-Part-One/shaun-styles.scss": {
+	"/Objects-Part-One/shaun-styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -57,22 +57,22 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/shaun-styles.css",
+		"oAP": "/Objects-Part-One/shaun-styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Object-Prototypes-Part-One/styles.css": {
+	"/Objects-Part-One/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/styles-min.css",
+		"oAP": "/Objects-Part-One/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Object-Prototypes-Part-One/styles.scss": {
+	"/Objects-Part-One/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -80,52 +80,52 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-One/styles.css",
+		"oAP": "/Objects-Part-One/styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Object-Prototypes-Part-Two/index.haml": {
+	"/Objects-Part-Two/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/index.html",
+		"oAP": "/Objects-Part-Two/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Object-Prototypes-Part-Two/index.html": {
+	"/Objects-Part-Two/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/index.html",
+		"oAP": "/Objects-Part-Two/index.html",
 		"oF": 0
 		},
-	"/Object-Prototypes-Part-Two/main.js": {
+	"/Objects-Part-Two/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "/Object-Prototypes-Part-Two/main-min.js",
+		"oAP": "/Objects-Part-Two/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Object-Prototypes-Part-Two/shaun-styles.css": {
+	"/Objects-Part-Two/shaun-styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/shaun-styles-min.css",
+		"oAP": "/Objects-Part-Two/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Object-Prototypes-Part-Two/shaun-styles.scss": {
+	"/Objects-Part-Two/shaun-styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -133,22 +133,22 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/shaun-styles.css",
+		"oAP": "/Objects-Part-Two/shaun-styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Object-Prototypes-Part-Two/styles.css": {
+	"/Objects-Part-Two/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/styles-min.css",
+		"oAP": "/Objects-Part-Two/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Object-Prototypes-Part-Two/styles.scss": {
+	"/Objects-Part-Two/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -156,7 +156,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Object-Prototypes-Part-Two/styles.css",
+		"oAP": "/Objects-Part-Two/styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

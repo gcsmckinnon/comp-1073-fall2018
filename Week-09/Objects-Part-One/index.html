@@ -8,12 +8,12 @@
 <link href='shaun-styles.css' rel='stylesheet'>
 <!-- Custom CSS -->
 <link href='styles.css' rel='stylesheet'>
-<title>Object Prototypes: Part One</title>
+<title>Objects: Part One</title>
 </head>
 <body>
 <div class='container'>
 <header class='mt-5' id='main-header'>
-<h1>Object & Object Prototypes: Part One</h1>
+<h1>Objects: Part One</h1>
 </header>
 <hr>
 <hr>
@@ -23,22 +23,30 @@
 <h2>Object Recap</h2>
 <hr>
 </header>
-<row>
+<div class='row'>
 <p class='content'><span class='emphasis'>Objects</span>, like in most languages, are a way for us to encapsulate code under one idea. Generally an object is best described using a
 <em>noun</em>
 (a &nbsp;<span class='emphasis'>person</span>,&nbsp;<span class='emphasis'>place</span>,&nbsp;or&nbsp;<span class='emphasis'>thing</span>).
 </p>
+<div class='row'>
+<div class='col-sm-6'>
 <p class='content'>
 <strong class='emphasis'>Properties</strong>
 are basically descriptive words
 <em>(adjectives)</em>
 that can be used to define properties or attributes about an object.<strong class='emphasis'>Below</strong>, we see an object defined with 3 properties:<span class='emphasis'>name</span>, &nbsp;<span class='emphasis'>age</span>, and&nbsp;<span class='emphasis'>interests</span>.
 </p>
+</div>
+<div class='col-sm-6'>
 <pre><code class='language-javascript'>let person = {
   name: "Shaun",
   age: 39,
   interests: ["programming", "Diablo", "cage fighting"]
 }</code></pre>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'>
 <p class='content'>
 <strong>
 Methods
@@ -49,6 +57,8 @@ Shaun
 </span>
 will likely be able to&nbsp;<span class='emphasis'>talk</span>&nbsp;and&nbsp;<span class='emphasis'>walk</span>.
 </p>
+</div>
+<div class='col-sm-6'>
 <pre><code class='language-javascript'>let person = {
   name: "Shaun",
   age: 39,
@@ -60,7 +70,9 @@ will likely be able to&nbsp;<span class='emphasis'>talk</span>&nbsp;and&nbsp;<sp
     posX += 5;
   }
 }</code></pre>
-</row>
+</div>
+</div>
+</div>
 </main>
 <section>
 <header>
@@ -99,7 +111,7 @@ Pretty cool eh? But we're not done. Let's look at the properties from our
 <span class='emphasis'>person</span>
 object:
 </p>
-<ol start='4'>
+<ol>
 <li>
 <div class='inst'>Create the following object:</div>
 <pre><code class='language-javascript'>let person = {
@@ -330,7 +342,7 @@ This is a lot to maintain, and, to be honest, not practical. Sometimes you may w
 <span class='emphasis'>(if it walks like a duck and quacks like a duck it must be ...),</span>
 we have the ability to add a new property whenever we want.
 </p>
-<ol>
+<ol start='10'>
 <li>
 <div class='inst'>
 Add a new property called
@@ -353,11 +365,21 @@ Add a new property called
 <span class='emphasis'>petToHTML</span>
 and set it's value to the following function defintion
 </div>
-<pre><code class='language-javascript'>person.petCount = 3;</code></pre>
+<pre><code class='language-javascript'>person.petToHTML = function (selector) {
+  let div = document.createElement('div');
+
+  if (this.hasPets) {
+    div.textContent = `${this.name} has ${this.petCount} pets.`;
+  } else {
+    div.textContent = `${this.name} doesn't have any pets.`;
+  }
+
+  document.querySelector(selector).append(div);
+}</code></pre>
 </li>
 <li>
 <div class='inst'>
-Last, call the new petToHTML method passing '#doYouGotPets' as the argument
+Lastly, call the new petToHTML method passing '#doYouGotPets' as the argument
 </div>
 <pre><code class='language-javascript'>person.petToHTML('#doYouGotPets');</code></pre>
 <div id='doYouGotPets'></div>

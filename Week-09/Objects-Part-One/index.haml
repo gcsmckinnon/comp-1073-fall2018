@@ -10,12 +10,12 @@
     / Custom CSS
     %link{:href => "styles.css", :rel => "stylesheet"}
 
-    %title Object Prototypes: Part One
+    %title Objects: Part One
 
   %body
     .container
       %header#main-header.mt-5
-        %h1 Object & Object Prototypes: Part One
+        %h1 Objects: Part One
 
       %hr
       %hr
@@ -26,7 +26,7 @@
             %h2 Object Recap
             %hr
 
-          %row
+          .row
             %p.content
               %span.emphasis<>
                 Objects
@@ -43,61 +43,67 @@
                 thing
               \).
             
-            %p.content
-              %strong.emphasis Properties
-              are basically descriptive words
-              %em (adjectives)
-              that can be used to define properties or attributes about an object.
-              %strong.emphasis<>
-                Below
-              , we see an object defined with 3 properties:
-              %span.emphasis<>
-                name
-              , &nbsp;
-              %span.emphasis<>
-                age
-              , and&nbsp;
-              %span.emphasis<>
-                interests
-              \.
-
-            %pre
-              %code.language-javascript
-                :plain
-                  let person = {
-                    name: "Shaun",
-                    age: 39,
-                    interests: ["programming", "Diablo", "cage fighting"]
-                  }
+            .row
+              .col-sm-6
+                %p.content
+                  %strong.emphasis Properties
+                  are basically descriptive words
+                  %em (adjectives)
+                  that can be used to define properties or attributes about an object.
+                  %strong.emphasis<>
+                    Below
+                  , we see an object defined with 3 properties:
+                  %span.emphasis<>
+                    name
+                  , &nbsp;
+                  %span.emphasis<>
+                    age
+                  , and&nbsp;
+                  %span.emphasis<>
+                    interests
+                  \.
+              
+              .col-sm-6
+                %pre
+                  %code.language-javascript
+                    :plain
+                      let person = {
+                        name: "Shaun",
+                        age: 39,
+                        interests: ["programming", "Diablo", "cage fighting"]
+                      }
             
-            %p.content
-              %strong
-                Methods
-              are actions an object can perform. For example an object of type
-              %span.emphasis
-                Shaun
-              will likely be able to&nbsp;
-              %span.emphasis<>
-                talk
-              &nbsp;and&nbsp;
-              %span.emphasis<>
-                walk
-              \.      
-
-            %pre
-              %code.language-javascript
-                :plain
-                  let person = {
-                    name: "Shaun",
-                    age: 39,
-                    interests: ["programming", "Diablo", "cage fighting"]
-                    talk: function () {
-                      console.log("I'm 39");
-                    },
-                    walk: function () {
-                      posX += 5;
-                    }
-                  }              
+            .row
+              .col-sm-6
+                %p.content
+                  %strong
+                    Methods
+                  are actions an object can perform. For example an object of type
+                  %span.emphasis
+                    Shaun
+                  will likely be able to&nbsp;
+                  %span.emphasis<>
+                    talk
+                  &nbsp;and&nbsp;
+                  %span.emphasis<>
+                    walk
+                  \.
+                  
+              .col-sm-6      
+                %pre
+                  %code.language-javascript
+                    :plain
+                      let person = {
+                        name: "Shaun",
+                        age: 39,
+                        interests: ["programming", "Diablo", "cage fighting"]
+                        talk: function () {
+                          console.log("I'm 39");
+                        },
+                        walk: function () {
+                          posX += 5;
+                        }
+                      }              
 
         %section
           %header
@@ -141,7 +147,7 @@
             %span.emphasis person
             object:
 
-          %ol{ start: 4 }
+          %ol
             %li
               .inst Create the following object:
               %pre
@@ -401,7 +407,7 @@
             %span.emphasis (if it walks like a duck and quacks like a duck it must be ...),
             we have the ability to add a new property whenever we want.
 
-          %ol
+          %ol{ start: 10 }
             %li
               .inst
                 Add a new property called 
@@ -428,10 +434,20 @@
               %pre
                 %code.language-javascript
                   :plain
-                    person.petCount = 3;
+                    person.petToHTML = function (selector) {
+                      let div = document.createElement('div');
+
+                      if (this.hasPets) {
+                        div.textContent = `${this.name} has ${this.petCount} pets.`;
+                      } else {
+                        div.textContent = `${this.name} doesn't have any pets.`;
+                      }
+
+                      document.querySelector(selector).append(div);
+                    }
             %li
               .inst
-                Last, call the new petToHTML method passing '#doYouGotPets' as the argument
+                Lastly, call the new petToHTML method passing '#doYouGotPets' as the argument
               %pre
                 %code.language-javascript
                   :plain
