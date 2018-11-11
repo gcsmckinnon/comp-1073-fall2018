@@ -4,52 +4,1082 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "D2783570-2858-4846-A345-8BBEE11451CB"
+		"uuidString": "7605A7E3-A743-46D6-98B0-7660EB7B8871"
 		}
 	],
 "creatorBuild": "28905",
 "files": {
-	"/Objects-Part-One/index.haml": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
+	"/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/index.html",
+		"oF": 0
+		},
+	"/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-01/Introducing-JavaScript.key": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Introducing-JavaScript.key",
+		"oF": 0
+		},
+	"/Week-01/Introducing-JavaScript.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Introducing-JavaScript.pdf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/LICENSE.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/LICENSE.txt",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Bold.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-ExtraBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Italic.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Light.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-LightItalic.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-Regular.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-SemiBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/index.html",
+		"oF": 0
+		},
+	"/Week-01/IntroducingJavaScript/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-01/IntroducingJavaScript/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-01/IntroducingJavaScript/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-01/Introductions_and_Expectations.key": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Introductions_and_Expectations.key",
+		"oF": 0
+		},
+	"/Week-01/Introductions_and_Expectations.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Introductions_and_Expectations.pdf",
+		"oF": 0
+		},
+	"/Week-01/NumberGuessingGame/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/NumberGuessingGame/index.html",
+		"oF": 0
+		},
+	"/Week-01/NumberGuessingGame/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-01/NumberGuessingGame/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-01/NumberGuessingGame/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-01/NumberGuessingGame/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-01/Starter-IntroducingJavaScript.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Starter-IntroducingJavaScript.zip",
+		"oF": 0
+		},
+	"/Week-01/Starter-NumberGuessingGame.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-01/Starter-NumberGuessingGame.zip",
+		"oF": 0
+		},
+	"/Week-02/PhraseGuess/dictionary.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/dictionary-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-02/PhraseGuess/fonts/Montserrat-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/fonts/Montserrat-Light.ttf",
+		"oF": 0
+		},
+	"/Week-02/PhraseGuess/fonts/Montserrat-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/fonts/Montserrat-Regular.ttf",
+		"oF": 0
+		},
+	"/Week-02/PhraseGuess/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/index.html",
+		"oF": 0
+		},
+	"/Week-02/PhraseGuess/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-02/PhraseGuess/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-02/PhraseGuess/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-02/Starter-PhraseGuess.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Starter-PhraseGuess.zip",
+		"oF": 0
+		},
+	"/Week-02/Starter-Variables-Numbers-Strings.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Starter-Variables-Numbers-Strings.zip",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/LICENSE.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/LICENSE.txt",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Bold.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-ExtraBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Italic.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Light.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-LightItalic.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-Regular.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-SemiBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/index.html",
+		"oF": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/numbers.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/numbers-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/strings.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/strings-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-02/Variables-Numbers-Strings/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-02/Variables-Numbers-Strings/variables.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-02/Variables-Numbers-Strings/variables-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-03/Arrays/arrays.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/arrays-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/LICENSE.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/LICENSE.txt",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-Bold.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-ExtraBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-Italic.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-Light.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-LightItalic.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-Regular.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-SemiBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf",
+		"oF": 0
+		},
+	"/Week-03/Arrays/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/index.html",
+		"oF": 0
+		},
+	"/Week-03/Arrays/simple-reset.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/simple-reset-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-03/Arrays/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-03/Arrays/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-03/Starter-Arrays.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Starter-Arrays.zip",
+		"oF": 0
+		},
+	"/Week-03/Starter-TicTacToe.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/Starter-TicTacToe.zip",
+		"oF": 0
+		},
+	"/Week-03/TicTacToe/bg.png": {
+		"ft": 32768,
+		"iS": 2154837,
+		"oA": 0,
+		"oAP": "/Week-03/TicTacToe/bg.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/Week-03/TicTacToe/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-03/TicTacToe/index.html",
+		"oF": 0
+		},
+	"/Week-03/TicTacToe/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-03/TicTacToe/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-03/TicTacToe/opponent-ai.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-03/TicTacToe/opponent-ai-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-03/TicTacToe/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-03/TicTacToe/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-04/Conditions-Loops/conditionalSyntax.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/conditionalSyntax-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-04/Conditions-Loops/conditionsAndLoops.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/conditionsAndLoops-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-04/Conditions-Loops/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/index.html",
+		"oF": 0
+		},
+	"/Week-04/Conditions-Loops/loopSyntax.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/loopSyntax-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-04/Conditions-Loops/products.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/products-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-04/Conditions-Loops/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-04/Conditions-Loops/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-04/Starter-Conditions-Loops.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-04/Starter-Conditions-Loops.zip",
+		"oF": 0
+		},
+	"/Week-05/Custom-Functions/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-05/Custom-Functions/index.html",
+		"oF": 0
+		},
+	"/Week-05/Custom-Functions/main-backup.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-05/Custom-Functions/main-backup-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-05/Custom-Functions/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-05/Custom-Functions/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-05/Custom-Functions/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-05/Custom-Functions/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-05/Library-Functions/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-05/Library-Functions/index.html",
+		"oF": 0
+		},
+	"/Week-05/Library-Functions/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-05/Library-Functions/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-05/Library-Functions/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-05/Library-Functions/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-05/Starter-Custom-Functions.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-05/Starter-Custom-Functions.zip",
+		"oF": 0
+		},
+	"/Week-05/Starter-Library-Functions.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-05/Starter-Library-Functions.zip",
+		"oF": 0
+		},
+	"/Week-06/Callbacks-Flow.graffle": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-06/Callbacks-Flow.graffle",
+		"oF": 0
+		},
+	"/Week-06/Callbacks-Flow.jpg": {
+		"ft": 16384,
+		"iS": 96292,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Callbacks-Flow.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-06/Events/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-06/Events/index.html",
+		"oF": 0
+		},
+	"/Week-06/Events/lectureEvents.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Events/lectureEvents-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-06/Events/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Events/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-06/Events/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Events/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-06/Simon-Says/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-06/Simon-Says/index.html",
+		"oF": 0
+		},
+	"/Week-06/Simon-Says/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Simon-Says/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-06/Simon-Says/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-06/Simon-Says/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-06/Starter-Events.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-06/Starter-Events.zip",
+		"oF": 0
+		},
+	"/Week-06/Starter-Simon-Says.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-06/Starter-Simon-Says.zip",
+		"oF": 0
+		},
+	"/Week-08/DOM-Part-One/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-One/index.html",
+		"oF": 0
+		},
+	"/Week-08/DOM-Part-One/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-One/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-08/DOM-Part-One/shaun-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-One/shaun-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/DOM-Part-One/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-One/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/DOM-Part-Two/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-Two/index.html",
+		"oF": 0
+		},
+	"/Week-08/DOM-Part-Two/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-Two/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-08/DOM-Part-Two/shaun-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-Two/shaun-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/DOM-Part-Two/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM-Part-Two/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/DOM/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/DOM/index.html",
+		"oF": 0
+		},
+	"/Week-08/DOM/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-08/DOM/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/DOM/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/Go-Fish/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Go-Fish/index.html",
+		"oF": 0
+		},
+	"/Week-08/Go-Fish/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-08/Go-Fish/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-08/Go-Fish/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-08/Go-Fish/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-08/Starter-DOM-Part-One.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Starter-DOM-Part-One.zip",
+		"oF": 0
+		},
+	"/Week-08/Starter-DOM-Part-Two.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Starter-DOM-Part-Two.zip",
+		"oF": 0
+		},
+	"/Week-08/Week-08-Thursday.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Thursday.mp4",
+		"oF": 0
+		},
+	"/Week-08/Week-08-Thursday.screenflow/Media/4652B35C-C882-44D6-91D6-7494BEF70CB1_{B9897B3B-55BE-468A-BB8B-2A7DAA3CE488}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Thursday.screenflow/Media/4652B35C-C882-44D6-91D6-7494BEF70CB1_{B9897B3B-55BE-468A-BB8B-2A7DAA3CE488}.scc",
+		"oF": 0
+		},
+	"/Week-08/Week-08-Thursday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Thursday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-08/Week-08-Thursday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 178980,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Thursday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-08/Week-08-Thursday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Thursday.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-08/Week-08-Tuesday.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08-Tuesday.mp4",
+		"oF": 0
+		},
+	"/Week-08/Week-08.screenflow/Media/454C8C81-C654-42AB-8DF8-78758D9DC39F_{461E3F91-DAAE-4D94-80BB-E8905F2DA40F}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08.screenflow/Media/454C8C81-C654-42AB-8DF8-78758D9DC39F_{461E3F91-DAAE-4D94-80BB-E8905F2DA40F}.scc",
+		"oF": 0
+		},
+	"/Week-08/Week-08.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-08/Week-08.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 186496,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-08/Week-08.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-08/Week-08.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-09/Objects-Part-One/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/index.html",
+		"oAP": "/Week-09/Objects-Part-One/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Objects-Part-One/index.html": {
+	"/Week-09/Objects-Part-One/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/index.html",
+		"oAP": "/Week-09/Objects-Part-One/index.html",
 		"oF": 0
 		},
-	"/Objects-Part-One/main.js": {
+	"/Week-09/Objects-Part-One/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
-		"oA": 1,
-		"oAP": "/Objects-Part-One/main-min.js",
+		"oA": 0,
+		"oAP": "/Week-09/Objects-Part-One/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Objects-Part-One/shaun-styles.css": {
+	"/Week-09/Objects-Part-One/shaun-styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/shaun-styles-min.css",
+		"oAP": "/Week-09/Objects-Part-One/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Objects-Part-One/shaun-styles.scss": {
+	"/Week-09/Objects-Part-One/shaun-styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -57,22 +1087,22 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/shaun-styles.css",
+		"oAP": "/Week-09/Objects-Part-One/shaun-styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Objects-Part-One/styles.css": {
+	"/Week-09/Objects-Part-One/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/styles-min.css",
+		"oAP": "/Week-09/Objects-Part-One/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Objects-Part-One/styles.scss": {
+	"/Week-09/Objects-Part-One/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -80,52 +1110,52 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-One/styles.css",
+		"oAP": "/Week-09/Objects-Part-One/styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Objects-Part-Two/index.haml": {
+	"/Week-09/Objects-Part-Two/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/index.html",
+		"oAP": "/Week-09/Objects-Part-Two/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Objects-Part-Two/index.html": {
+	"/Week-09/Objects-Part-Two/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/index.html",
+		"oAP": "/Week-09/Objects-Part-Two/index.html",
 		"oF": 0
 		},
-	"/Objects-Part-Two/main.js": {
+	"/Week-09/Objects-Part-Two/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
-		"oA": 1,
-		"oAP": "/Objects-Part-Two/main-min.js",
+		"oA": 0,
+		"oAP": "/Week-09/Objects-Part-Two/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Objects-Part-Two/shaun-styles.css": {
+	"/Week-09/Objects-Part-Two/shaun-styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/shaun-styles-min.css",
+		"oAP": "/Week-09/Objects-Part-Two/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Objects-Part-Two/shaun-styles.scss": {
+	"/Week-09/Objects-Part-Two/shaun-styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -133,22 +1163,22 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/shaun-styles.css",
+		"oAP": "/Week-09/Objects-Part-Two/shaun-styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/Objects-Part-Two/styles.css": {
+	"/Week-09/Objects-Part-Two/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/styles-min.css",
+		"oAP": "/Week-09/Objects-Part-Two/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Objects-Part-Two/styles.scss": {
+	"/Week-09/Objects-Part-Two/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -156,118 +1186,234 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Objects-Part-Two/styles.css",
+		"oAP": "/Week-09/Objects-Part-Two/styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/prism/prism-min.css": {
+	"/Week-09/prism/prism-min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/prism/prism-min-min.css",
+		"oAP": "/Week-09/prism/prism-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/prism/prism.css": {
+	"/Week-09/prism/prism.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/prism/prism-min.css",
+		"oAP": "/Week-09/prism/prism-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/prism/prism.js": {
+	"/Week-09/prism/prism.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
-		"oA": 1,
-		"oAP": "/prism/prism-min.js",
+		"oA": 0,
+		"oAP": "/Week-09/prism/prism-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Starter-Objects.zip": {
+	"/Week-09/Starter-Objects.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Starter-Objects.zip",
+		"oAP": "/Week-09/Starter-Objects.zip",
 		"oF": 0
 		},
-	"/Week-09-Thursday.screenflow/Media/B6017E75-669B-4508-8BF8-3A0ECB270426_{8A326DB1-609B-4EBF-8907-1B1C26ABAF16}.scc": {
+	"/Week-09/Week-09-Thursday.screenflow/Media/B6017E75-669B-4508-8BF8-3A0ECB270426_{8A326DB1-609B-4EBF-8907-1B1C26ABAF16}.scc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Thursday.screenflow/Media/B6017E75-669B-4508-8BF8-3A0ECB270426_{8A326DB1-609B-4EBF-8907-1B1C26ABAF16}.scc",
+		"oAP": "/Week-09/Week-09-Thursday.screenflow/Media/B6017E75-669B-4508-8BF8-3A0ECB270426_{8A326DB1-609B-4EBF-8907-1B1C26ABAF16}.scc",
 		"oF": 0
 		},
-	"/Week-09-Thursday.screenflow/ScreenFlowDocument.dat": {
+	"/Week-09/Week-09-Thursday.screenflow/ScreenFlowDocument.dat": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Thursday.screenflow/ScreenFlowDocument.dat",
+		"oAP": "/Week-09/Week-09-Thursday.screenflow/ScreenFlowDocument.dat",
 		"oF": 0
 		},
-	"/Week-09-Thursday.screenflow/thumbnail.jpg": {
+	"/Week-09/Week-09-Thursday.screenflow/thumbnail.jpg": {
 		"ft": 16384,
 		"iS": 357869,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/Week-09-Thursday.screenflow/thumbnail.jpg",
+		"oAP": "/Week-09/Week-09-Thursday.screenflow/thumbnail.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/Week-09-Thursday.screenflow/version.plist": {
+	"/Week-09/Week-09-Thursday.screenflow/version.plist": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Thursday.screenflow/version.plist",
+		"oAP": "/Week-09/Week-09-Thursday.screenflow/version.plist",
 		"oF": 0
 		},
-	"/Week-09-Tuesday.mp4": {
+	"/Week-09/Week-09-Tuesday.mp4": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Tuesday.mp4",
+		"oAP": "/Week-09/Week-09-Tuesday.mp4",
 		"oF": 0
 		},
-	"/Week-09-Tuesday.screenflow/Media/3B9A53E5-EE3D-4EA8-AF90-0D720B503ECB_{FDDBFCBA-1708-48B6-92CA-07AC12E4FAD9}.scc": {
+	"/Week-09/Week-09-Tuesday.screenflow/Media/3B9A53E5-EE3D-4EA8-AF90-0D720B503ECB_{FDDBFCBA-1708-48B6-92CA-07AC12E4FAD9}.scc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Tuesday.screenflow/Media/3B9A53E5-EE3D-4EA8-AF90-0D720B503ECB_{FDDBFCBA-1708-48B6-92CA-07AC12E4FAD9}.scc",
+		"oAP": "/Week-09/Week-09-Tuesday.screenflow/Media/3B9A53E5-EE3D-4EA8-AF90-0D720B503ECB_{FDDBFCBA-1708-48B6-92CA-07AC12E4FAD9}.scc",
 		"oF": 0
 		},
-	"/Week-09-Tuesday.screenflow/ScreenFlowDocument.dat": {
+	"/Week-09/Week-09-Tuesday.screenflow/ScreenFlowDocument.dat": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Tuesday.screenflow/ScreenFlowDocument.dat",
+		"oAP": "/Week-09/Week-09-Tuesday.screenflow/ScreenFlowDocument.dat",
 		"oF": 0
 		},
-	"/Week-09-Tuesday.screenflow/thumbnail.jpg": {
+	"/Week-09/Week-09-Tuesday.screenflow/thumbnail.jpg": {
 		"ft": 16384,
 		"iS": 339357,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/Week-09-Tuesday.screenflow/thumbnail.jpg",
+		"oAP": "/Week-09/Week-09-Tuesday.screenflow/thumbnail.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/Week-09-Tuesday.screenflow/version.plist": {
+	"/Week-09/Week-09-Tuesday.screenflow/version.plist": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-09-Tuesday.screenflow/version.plist",
+		"oAP": "/Week-09/Week-09-Tuesday.screenflow/version.plist",
 		"oF": 0
+		},
+	"/Week-10/prism/prism-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/prism/prism-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/prism/prism.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/prism/prism-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/prism/prism.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-10/prism/prism-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-10/Prototypes/index.haml": {
+		"cB": 0,
+		"cDA": 0,
+		"eHT": 0,
+		"ft": 256,
+		"nEA": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/index.html",
+		"oF": 0,
+		"oFM": 2,
+		"uDQ": 0,
+		"uUN": 0
+		},
+	"/Week-10/Prototypes/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/index.html",
+		"oF": 0
+		},
+	"/Week-10/Prototypes/main-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/main-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-10/Prototypes/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-10/Prototypes/shaun-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/shaun-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/Prototypes/shaun-styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/shaun-styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/Week-10/Prototypes/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/Prototypes/styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		}
 	},
 "hooks": [
@@ -275,10 +1421,10 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 562946300,
-	"displayValue": "Week-09",
+	"creationDate": 563549441.98865998,
+	"displayValue": "Weekly Lessons",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-leo",
+	"iconImageName": "meme-confusedBaby",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
@@ -716,7 +1862,7 @@
 			},
 		"camelcase": {
 			"active": 0,
-			"optionString": "{'properties': 'always'}"
+			"optionString": "{'properties': 'always', 'ignoreDestructuring': false}"
 			},
 		"capitalized-comments": {
 			"active": 0,
@@ -792,11 +1938,11 @@
 			},
 		"func-name-matching": {
 			"active": 0,
-			"optionString": "'always', {'includeCommonJSModuleExports': false}"
+			"optionString": "'always', {'considerPropertyDescriptor': false, 'includeCommonJSModuleExports': false}"
 			},
 		"func-names": {
 			"active": 0,
-			"optionString": "'always'"
+			"optionString": "'always', {'generators': 'always'}"
 			},
 		"func-style": {
 			"active": 0,
@@ -1308,7 +2454,7 @@
 			},
 		"no-self-assign": {
 			"active": 1,
-			"optionString": "{'props': false}"
+			"optionString": "{'props': true}"
 			},
 		"no-self-compare": {
 			"active": 0,
@@ -1468,7 +2614,7 @@
 			},
 		"object-curly-newline": {
 			"active": 0,
-			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
+			"optionString": "{'ObjectExpression': {'multiline': true, 'consistent': true}, 'ObjectPattern': {'multiline': true, 'consistent': true}}"
 			},
 		"object-curly-spacing": {
 			"active": 0,
@@ -1476,7 +2622,7 @@
 			},
 		"object-property-newline": {
 			"active": 0,
-			"optionString": "{'allowMultiplePropertiesPerLine': true}"
+			"optionString": "{'allowAllPropertiesOnSameLine': true}"
 			},
 		"object-shorthand": {
 			"active": 0,
@@ -2095,7 +3241,7 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
@@ -2330,7 +3476,7 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
@@ -2338,7 +3484,7 @@
 			"flagValue": -1
 			},
 		"compress": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"conditionals": {
@@ -2346,7 +3492,7 @@
 			"flagValue": -1
 			},
 		"dead_code": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"directives": {
@@ -2374,7 +3520,7 @@
 			"flagValue": -1
 			},
 		"hoist_funs": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"hoist_props": {
@@ -2418,7 +3564,7 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"keep_fnames": {
@@ -2438,7 +3584,7 @@
 			"flagValue": -1
 			},
 		"mangle": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"max_line_len": {
@@ -2558,7 +3704,7 @@
 			"flagValue": -1
 			}
 		},
-	"uglifyReservedNamesString": "$",
+	"uglifyReservedNamesString": "$,exports,require",
 	"websiteRelativeRoot": ""
 	},
 "settingsFileVersion": "3"

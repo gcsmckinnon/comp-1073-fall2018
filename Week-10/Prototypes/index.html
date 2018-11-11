@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- Third-Party CDNs -->
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' rel='stylesheet'>
+<link href='../prism/prism.css' rel='stylesheet'>
+<link href='shaun-styles.css' rel='stylesheet'>
+<!-- Custom CSS -->
+<link href='styles.css' rel='stylesheet'>
+<title>Object Prototypes: Part One</title>
+</head>
+<body>
+<div class='container'>
+<header class='mt-5' id='main-header'>
+<h1>Object Prototypes: Part One</h1>
+</header>
+<hr>
+<hr>
+<article>
+<main class='my-5'>
+<header class='mb-4' id='secondary-header'>
+<h2>First: What does "By Reference" mean?</h2>
+<hr>
+</header>
+<section>
+<p class='content'>
+In programming, there 2 fundamental concepts of how data is passed around a program:
+<span class='emphasis'>
+By Copy
+</span>
+and
+<span class='emphasis'>
+By Reference.
+</span>
+It is important to understand this concept as it helps you understand how prototypal inheritance works.
+</p>
+<p class='content'>
+As we keep saying
+<span class='emphasis'>"Most things in JavaScript are objects".</span>
+Objects by their very nature are passed around by reference. This means that instead of creating a complete duplicate of the object only the
+<span class='emphasis'>memory address of the object</span>
+is passed. So, when you attempt to access any properties or methods, you're always accessing the original. The largest benefit to that is that any modifications to the original will obviously be available to any of the references.
+</p>
+<p class='content'>
+Let's look at an example of this:
+</p>
+<pre><code class='language-javascript'>// The original object
+let MyObj = {
+  prop1: "Value 1",
+  prop2: "Value 2"
+}
+
+// Creating a reference
+let obj = MyObj;
+console.log(obj.prop1, obj.prop2);
+// Value 1 Value 2
+
+// Modifying the original object
+MyObj.prop3 = "Value 3";
+console.log(obj.prop3);
+// Value 3</code></pre>
+<p class='content'>
+Notice how the change in the
+<span class='emphasis'>MyObj object</span>
+is immediately accessible to the
+<span class='emphasis'>obj variable.</span>
+References are incredibly efficient. If everything was passed by copy our available memory would quickly disappear.
+</p>
+</section>
+</main>
+<section>
+<header>
+<h3>Recap: Object Constructors</h3>
+<hr>
+</header>
+<div class='row'>
+<div class='col-sm-6'>
+<p class='content'>
+In order for us to utilize object constructors we need to understand the concept of
+<span class='emphasis'>this.</span>
+<span class='emphasis'>this</span>
+is a powerful keyword in object oriented programming. In objects
+<strong>this</strong>
+represents the owner object, which in the case of an object constructor, would be the wrapping function.
+</p>
+<p class='content'>
+<span class='emphasis'>REMEMBER:</span>
+MOST things in JavaScript are already objects. This includes<span class='emphasis'>&nbsp;functions</span>.
+</p>
+</div>
+<div class='col-sm-6'>
+<pre><code class='language-javascript'>// This is an object constructor. It is just a simple
+// function. Remember: Most things in JavaScript are
+// an Object. This includes functions!
+function MyObjectConstructor (prop1, prop2, prop3) {
+  // 'this' refers to MyObjectConstructor
+  this.prop1 = prop1;
+  this.prop2 = prop2;
+  this.prop3 = prop3;
+}</code></pre>
+</div>
+</div>
+</section>
+<section>
+<header>
+<h3>Example: Let's recreate a new Person Object Constructor</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>REMEMBER: Object Constructors are just simply functions. You can call this function. It's not really going to do anything because it doesn't have a return value, but you're not going to break anything if you call it.</span>
+</p>
+<ol>
+<li>
+<div class='inst'>Create a new object constructor for</div>
+<span class='emphasis'>person</span>
+<pre><code class='language-javascript'>function Person (firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}</code></pre>
+</li>
+</ol>
+</section>
+<section>
+<header>
+<h3>Example: Using Objects as Values</h3>
+<hr>
+</header>
+<p class='content'>
+In JavaScript we can assign any value to a property. It doesn't matter if it's a
+<span class='emphasis'>string, number, array, function or another object.</span>
+Because we have that power, we can turn our objects into very powerful data structures.
+</p>
+<p class='content'>
+We have created a person object constructor, but I want to add some other details to it. In the past, we've hardcoded the age of the person. I'd rather store their birthdate that way we can calculate their age when we need it. In order to do this, we'll assign a
+<span class='emphasis'>new Date object</span>
+to a
+<span class='emphasis'>dob</span>
+property.
+</p>
+<ol start='2'>
+<li>
+<pre><code class='language-javascript'>function Person (firstName, lastName, dob) {
+  // dob will need to be a string in this format: "1978/12/22"
+  this.dob = new Date(dob);
+}</code></pre>
+</li>
+</ol>
+<p class='content'>
+The great thing about
+<span class='emphasis'>dob</span>
+being a Date object is we can now use the properties and methods it brings with it to perform other functionality like calculating age or the difference between it and another date.
+</p>
+</section>
+<section>
+<header>
+<h3>Example: Instantiating Our Object</h3>
+<hr>
+</header>
+<p class='content'>
+The
+<span class='emphasis'>new</span>
+keyword is what makes this whole thing doable.
+<span class='emphasis'>new</span>
+does the following:
+</p>
+<ol>
+<li>It creates a new empty object</li>
+<li>
+It sets a new property on the object called
+<span class='emphasis'>prototype</span>
+</li>
+<li>
+It binds all the properties set with the
+<span class='emphasis'>this</span>
+keyword to the object
+</li>
+<li>It returns the newly created object</li>
+</ol>
+<p class='content'>
+<span class='emphasis'>Let's create a new person using our object constructor:</span>
+</p>
+<ol start='3'>
+<li>
+<div class='inst'>
+Create a new person with your
+<span class='emphasis'>First Name</span>
+and your
+<span class='emphasis'>Last Name</span>
+who has your
+<span class='emphasis'>dob (date of birth)</span>
+</div>
+<pre><code class='language-javascript'>let shaun = new Person("Shaun", "McKinnon", "1978/12/22");</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.log(),</span>
+output the person object.
+</div>
+<pre><code class='language-javascript'>console.log(shaun);</code></pre>
+</li>
+</ol>
+<p class='content'>
+You should notice that in your
+<span class='emphasis'>console</span>
+the
+<span class='emphasis'>Person</span>
+object is displayed with the handy
+<span class='emphasis'>
+<i class='fa fa-caret-down'></i>
+</span>
+icon. If you click that, then click the
+<span class='emphasis'>
+<i class='fa fa-caret-down'></i>
+</span>
+beside the
+<span class='emphasis'>dob</span>
+property, you will notice a property called
+<span class='emphasis'>__proto__.</span>
+</p>
+<p class='content'>
+<span class='emphasis'>__proto__</span>
+is the first part of learning what prototypal inheritance is. Basically, the properties defined under __proto__ are inherited by the object with the __proto__ property. This means that our
+<span class='emphasis'>dob object</span>
+is inheriting all the functionality you see under the __proto__ property. Because of this, we can easily use that functionality to perform operations on dob without having to create a whole bunch of new functionality.
+</p>
+</section>
+<section>
+<header>
+<h3>Example: Using Our Object</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>In Objects: Part Two</span>
+we learned how to access the properties of our instantiated object:
+</p>
+<ol start='5'>
+<li>
+<div class='inst'>Access the first and last name properties</div>
+<pre><code class='language-javascript'>console.log(shaun.firstName);
+console.log(shaun.lastName);</code></pre>
+</li>
+<li>
+<div class='inst'>Access the dob property</div>
+<pre><code class='language-javascript'>console.log(shaun.dob)</code></pre>
+</li>
+</ol>
+<p class='content'>
+The
+<span class='emphasis'>dob property</span>
+outputs a very verbose string
+<pre><code class='language-javascript'>// Fri Dec 22 1978 00:00:00 GMT-0500 (Eastern Standard Time)</code></pre>
+That's quite a bit of information, and may not be what we want. The
+<span class='emphasis'>Date object</span>
+has many properties that allow us to get/set and format our date. A very common way is to use the method
+<span class='emphasis'>.toLocaleDateString("locale-string").</span>
+</p>
+<ol start='7'>
+<li>
+<div class='inst'>Access the first and last name properties</div>
+<pre><code class='language-javascript'>console.log(shaun.dob.toLocaleDateString("en-CA"));</code></pre>
+</li>
+</ol>
+<p class='content'>
+You could also build your own date format function which would allow you to format it in a desired way:
+</p>
+<ol start='8'>
+<li>
+<div class='inst'>Create the following new date format function in the Person constructor object</div>
+<pre><code class='language-javascript'>this.dateFormat = function () {
+  let year = this.dob.getYear();
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.log(),</span>
+call your new dateFormat function
+</div>
+<pre><code class='language-javascript'>console.log(shaun.dateFormat());</code></pre>
+</li>
+</ol>
+</section>
+<section>
+<header>
+<h3>Explaining: .__proto__</h3>
+<hr>
+</header>
+<p class='content'>
+Every object has a
+<span class='emphasis'>__proto__</span>
+property. Seeing as how
+<span class='emphasis'>"Most things in JavaScript are object!",</span>
+you can assume
+<span class='emphasis'>most things have a property called __proto__.</span>
+</p>
+<p class='content'>
+<strong>
+<em>BUT WHAT IS __proto__???</em>
+</strong>
+__proto__ is a property that stores the reference relationship to an objects constructor and properties. Let's look at some common data types we work with, further proving most things are objects:
+</p>
+<ol start='10'>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.dir()</span>
+output a new String
+</div>
+<pre><code class='language-javascript'>console.dir(new String());</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.dir()</span>
+output a new Number
+</div>
+<pre><code class='language-javascript'>console.dir(new Number());</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.dir()</span>
+output a new Array
+</div>
+<pre><code class='language-javascript'>console.dir(new Array());</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.dir()</span>
+output a new Object
+</div>
+<pre><code class='language-javascript'>console.dir(new Object());</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.dir()</span>
+output a new Function
+</div>
+<pre><code class='language-javascript'>console.dir(new Function());</code></pre>
+</li>
+</ol>
+<p class='content'>
+If you utilize the
+<span class='emphasis'>
+<i class='fa fa-caret-down'></i>
+</span>
+open the
+<span class='emphasis'>String</span>
+object and look for the
+<span class='emphasis'>__proto__</span>
+property. If you click on its
+<span class='emphasis'>
+<i class='fa fa-caret-down'></i>
+</span>
+you will see the list of available properties that the
+<span class='emphasis'>String object</span>
+has inherited.
+</p>
+<p class='content'>
+You may be asking
+<span class='emphasis'>"Inheriting from where???".</span>
+If you remember, we called
+<span class='emphasis'>new String()</span>
+which returns an object. That object is inheriting from the
+<span class='emphasis'>String object.</span>
+BUT WAIT!!! It get's worse...
+</p>
+<p class='content'>
+If you scroll to the very bottom of the list, you'll notice another
+<span class='emphasis'>__proto__property.</span>
+That's because our object is inheriting from
+<span class='emphasis'>String</span>
+which happens to inherit from another object.
+<span class='emphasis'>Object.</span>
+</p>
+<p class='content'>
+If you try the same process with the other data types you'll see everyone of them eventually inherits from Object. If we did the same with an HTMLElement object, we'd see a very long inheritance list:
+</p>
+<pre><code class='language-javascript'>const body = document.querySelector('body');
+console.dir(body);
+// body <- HTMLBodyElement <- HTMLElement <- Element <- Node <- EventTarget <- Object</code></pre>
+</section>
+<section>
+<header>
+<h3>Explaining: .prototype</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>Prototype</span>
+is a property that is applied to all functions. This property exists to allow you to create inheritance to other properties and objects.
+</p>
+<p class='content'>
+Let's create a new property on our Person constructor object that returns the age of our instantiated person:
+</p>
+<ol start='15'>
+<li>
+<div class='inst'>Add a function to the Person.prototype that will return the person's current age</div>
+<pre><code class='language-javascript'>Person.prototype.getAge = function () {
+  let diff = Date.now() - dob.getTime();
+  let age = new Date(diff);
+  return Math.abs(age.getUTCFullYear() - 1970);
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using
+<span class='emphasis'>console.log()</span>
+output the currently instantiated person's age
+</div>
+<pre><code class='language-javascript'>console.log(shaun.getAge());</code></pre>
+</li>
+</ol>
+<p class='content'>
+Our Person object has inherited the .getAge function definition. This should open your eyes to realizing that getAge() could be defined and assigned to any object, not just Person. The only requirement we're really looking for is that the object have a dob property.
+</p>
+<p class='content'>
+This is a simple example of extending our object using the
+<span class='emphasis'>prototype</span>
+property. We can further extend our object by having it inherit aspects of another object. Basically a parent -> child kind of relationship.
+</p>
+<p class='content'>
+Let's create a new constructor function called
+<span class='emphasis'>SuperHero</span>
+and then we will have it inherit most of its blueprint from Person.
+</p>
+<ol start='17'>
+<li>
+<div class='inst'>
+Add a new constructor function called
+<span class='emphasis'>SuperHero</span>
+</div>
+<pre><code class='language-javascript'>let SuperHero = function (alias, firstName, lastName, dob) {}</code></pre>
+</li>
+<li>
+<div class='inst'>
+Add a new property called
+<span class='emphasis'>alias</span>
+and assign it the alias argument
+</div>
+<pre><code class='language-javascript'>let SuperHero = function (alias, firstName, lastName, dob) {
+  this.alias = alias;
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+In order to inherit from our Person object, we must
+<span class='emphasis'>instantiate</span>
+it using the
+<span class='emphasis'>.call() method.</span>
+This is essentially like calling
+<span class='emphasis'>super()</span>
+in other languages as it will instantiate the Person object and assign its properties to SuperHero where they are not already defined
+</div>
+<pre><code class='language-javascript'>let SuperHero = function (alias, firstName, lastName, dob) {
+  // ...
+  Person.call(this, firstName, lastName, dob);
+}</code></pre>
+</li>
+<li>
+<div class='inst'>
+In order to use all methods assigned to the Person prototype property, we must set a reference to it on our SuperHero constructor. Currently we have access to only the properties defined in the original Person structure, so we don't have access to .getAge(). To fix this, we will use Object.create which will assign the Person.prototype to our SuperHero.prototype
+</div>
+<pre><code class='language-javascript'>SuperHero.prototype = Object.create(Person.prototype);</code></pre>
+</li>
+<li>
+<div class='inst'>
+Create a new super hero
+</div>
+<pre><code class='language-javascript'>let theIncredibleHulk = new SuperHero(
+  "The Incredible Hulk",
+  "Bruce",
+  "Banner",
+  "1956-11-7"
+);</code></pre>
+</li>
+<li>
+<div class='inst'>
+Using console.log, output the date of birth using the .dateFormat() and the age using the .getAge()
+</div>
+<pre><code class='language-javascript'>console.log(theIncredibleHulk.dateFormat(), theIncredibleHulk.getAge());</code></pre>
+</li>
+</ol>
+</section>
+</article>
+</div>
+<footer>
+&copy;2018 - Shaun McKinnon
+</footer>
+<!-- Third-Party CDNs -->
+<script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script crossorigin='anonymous' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src='../prism/prism.js'></script>
+<!-- Custom JS -->
+<script src='main.js'></script>
+</body>
+</html>
