@@ -82,3 +82,44 @@ let theIncredibleHulk = new SuperHero(
 
 // Step 22 - Using console.log, output the date of birth using the .dateFormat() and the age using the .getAge()
 console.log(theIncredibleHulk.dateFormat(), theIncredibleHulk.getAge());
+
+// Step 23 - Create a new object literal called Food
+const Food = {
+  // Step 24 - Create an init function
+  init: function (type) {
+    this.type = type;
+  },
+  // Step 25 - Create an eat function
+  eat: function () {
+    return `You ate the ${this.type}`;
+  },
+  // Step 26 - Create a property called category with the value 'Food'
+  category: 'Food'
+}
+
+// Step 27 - Create a new object called Vegetable using Object.create(Food)
+const Vegetable = Object.create(Food);
+
+// Step 28 - Initialize the Vegetable
+Vegetable.init('Vegetable');
+
+// Step 29 - Override the .eat() function
+Vegetable.eat = function () {
+  return 'Eat your veggies!!!';
+}
+
+// Step 30 - Create a new object called Carrot using Object.create(Vegetable)
+const Carrot = Object.create(Vegetable);
+
+// Step 31 - Initialize the Carrot
+Carrot.init('Carrot');
+
+// Step 32 - Output the 3 levels of properties:
+// At the Carrot level:
+console.log(Carrot.type);
+
+// At the Vegetable level:
+console.log(Carrot.eat());
+
+// At the Food level:
+console.log(Carrot.category);

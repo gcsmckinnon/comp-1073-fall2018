@@ -4,3 +4,6 @@
 *.screenflow
 *.mp4
 *.graffle
+/Week-10/Prototypes/main-min.js
+*.haml
+*.codekit3
