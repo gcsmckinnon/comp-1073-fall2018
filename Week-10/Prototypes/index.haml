@@ -10,12 +10,12 @@
     / Custom CSS
     %link{:href => "styles.css", :rel => "stylesheet"}
 
-    %title Object Prototypes: Part One
+    %title Object Prototypes
 
   %body
     .container
       %header#main-header.mt-5
-        %h1 Object Prototypes: Part One
+        %h1 Object Prototypes
 
       %hr
       %hr
@@ -411,7 +411,8 @@
 
           %p.content
             %span.emphasis Prototype
-            is a property that is applied to all functions. This property exists to allow you to create inheritance to other properties and objects. 
+            is a property that is applied to all functions. This property exists to allow you to create inheritance to other properties and objects. This is known as
+            %span.emphasis prototype chaining.
 
           %p.content
             Let's create a new property on our Person constructor object that returns the age of our instantiated person:
@@ -512,6 +513,100 @@
                 %code.language-javascript
                   :plain
                     console.log(theIncredibleHulk.dateFormat(), theIncredibleHulk.getAge());
+          
+          %p.content
+            %span.emphasis In the above code
+            we our
+            %span.emphasis SuperHero object constructor
+            has inherited the properties and methods defined in the 
+            %span.emphasis Person object constructor.
+            In addition, we have assigned the
+            %span.emphasis Person.prototype
+            to our 
+            %span.emphasis SuperHero.prototype
+            to copy over the method we defined outside of our 
+            %span.emphasis Person constructor.
+
+          %p.content
+            This is one way to accomplish inheritance in JavaScript, but, as with many things in JavaScript, it isn't the only way. We can also use 
+            %span.emphasis Object Literals
+            and the
+            %span.emphasis Object.create()
+            method to accomplish the same thing:
+
+          %ol{ start: 23 }
+            %li
+              .inst
+                Create a new object literal called Food
+              %pre
+                %code.language-javascript
+                  :plain
+                    const Food = {
+                      // Step 24 - Create an init function
+                      init: function (type) {
+                        this.type = type;
+                      },
+                      // Step 25 - Create an eat function
+                      eat: function () {
+                        return `You ate the ${this.type}`;
+                      },
+                      // Step 26 - Create a property called category with the value 'Food'
+                      category: 'Food'
+                    }
+            %li
+              .inst
+                Create a new object called Vegetable using Object.create(Food)
+              %pre
+                %code.language-javascript
+                  :plain
+                    const Vegetable = Object.create(Food);
+            %li
+              .inst
+                Initialize the Vegetable
+              %pre
+                %code.language-javascript
+                  :plain
+                    Vegetable.init('Vegetable');
+            %li
+              .inst
+                Override the .eat() function
+              %pre
+                %code.language-javascript
+                  :plain
+                    Vegetable.eat = function () {
+                      return 'Eat your veggies!!!';
+                    }
+            %li
+              .inst
+                Create a new object called Carrot using Object.create(Vegetable)
+              %pre
+                %code.language-javascript
+                  :plain
+                    const Carrot = Object.create(Vegetable);
+            %li
+              .inst
+                Initialize the Carrot
+              %pre
+                %code.language-javascript
+                  :plain
+                    Carrot.init('Carrot');
+            %li
+              .inst
+                Output the 3 levels of properties:
+              %pre
+                %code.language-javascript
+                  :plain
+                    // At the Carrot level:
+                    console.log(Carrot.type);
+
+                    // At the Vegetable level:
+                    console.log(Carrot.eat());
+
+                    // At the Food level:
+                    console.log(Carrot.category);
+          
+          %p.content
+            Both methods accomplish the same idea of prototypal inheritance. I really like the object literal method over the object constructor. It's cleaner and fairly easy to read, but does require some extra work as you lose the constructor method.
 
     %footer
       &copy;2018 - Shaun McKinnon
