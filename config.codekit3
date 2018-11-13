@@ -1306,36 +1306,6 @@
 		"oAP": "/Week-09/Week-09-Tuesday.screenflow/version.plist",
 		"oF": 0
 		},
-	"/Week-10/prism/prism-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/Week-10/prism/prism-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/Week-10/prism/prism.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/Week-10/prism/prism-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/Week-10/prism/prism.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "/Week-10/prism/prism-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"/Week-10/Prototypes/index.haml": {
 		"cB": 0,
 		"cDA": 0,
@@ -1372,6 +1342,36 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "/Week-10/Prototypes/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-10/Prototypes/prism/prism-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/prism/prism-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/Prototypes/prism/prism.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/prism/prism-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-10/Prototypes/prism/prism.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Prototypes/prism/prism-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
