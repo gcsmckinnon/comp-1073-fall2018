@@ -13,6 +13,7 @@ const learningExamples = [
   ['Week-08/DOM-Extra', 'The DOM: Extra'],
   ['Week-09/Objects-Part-One', 'Objects: Part One'],
   ['Week-09/Objects-Part-Two', 'Objects: Part Two'],
+  ['Week-10/Prototypes', 'Object Prototypes'],
 ];
 
 const games = [
