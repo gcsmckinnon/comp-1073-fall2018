@@ -1,7 +1,14 @@
-fetch('https://insult.mattbas.org/api/insult')
+let myHeaders = new Headers();
+
+fetch('https://insult.mattbas.org/api/insult.html', {
+  method: 'GET',
+  mode: 'no-cors',
+  headers: myHeaders,
+  cache: 'default',
+})
 .then(function(response) {
-  return response.json();
+  console.log(response)
 })
 .then(function(myJson) {
-  console.log(JSON.stringify(myJson));
+  console.log(myJson)
 });
