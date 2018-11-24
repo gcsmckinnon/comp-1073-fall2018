@@ -1421,6 +1421,247 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/Week-10/Starter-Prototypes.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Starter-Prototypes.zip",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Thursday.screenflow/Media/BF24669D-7829-4B17-9991-84BDE686AA4A_{95F9F695-4B07-4781-AC89-A65F3DD6A03A}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Thursday.screenflow/Media/BF24669D-7829-4B17-9991-84BDE686AA4A_{95F9F695-4B07-4781-AC89-A65F3DD6A03A}.scc",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Thursday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Thursday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Thursday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 199490,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Thursday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-10/Week-10-Thursday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Thursday.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Tuesday.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Tuesday.mp4",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Tuesday.screenflow/Media/BA3041F7-9124-472E-9139-1E3C8290C307_{3A8254F5-6CE1-48C9-BF49-B2AAC2F47E2A}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Tuesday.screenflow/Media/BA3041F7-9124-472E-9139-1E3C8290C307_{3A8254F5-6CE1-48C9-BF49-B2AAC2F47E2A}.scc",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Tuesday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Tuesday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-10/Week-10-Tuesday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 169775,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Tuesday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-10/Week-10-Tuesday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-10/Week-10-Tuesday.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-11/Week-11-Thursday.screenflow/Media/EC0E76DD-17B0-4ACF-88EE-6E3B5A554616_{9D69D5B6-AA6A-40DD-962D-45CA5D590624}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-11/Week-11-Thursday.screenflow/Media/EC0E76DD-17B0-4ACF-88EE-6E3B5A554616_{9D69D5B6-AA6A-40DD-962D-45CA5D590624}.scc",
+		"oF": 0
+		},
+	"/Week-11/Week-11-Thursday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-11/Week-11-Thursday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-11/Week-11-Thursday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 289521,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-11/Week-11-Thursday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-11/Week-11-Thursday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-11/Week-11-Thursday.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-11/Week-11-Tuesday.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-11/Week-11-Tuesday.mp4",
+		"oF": 0
+		},
+	"/Week-12/data.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/Week-12/data-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/Week-12/index.haml": {
+		"cB": 0,
+		"cDA": 0,
+		"eHT": 0,
+		"ft": 256,
+		"nEA": 0,
+		"oA": 0,
+		"oAP": "/Week-12/index.html",
+		"oF": 0,
+		"oFM": 2,
+		"uDQ": 0,
+		"uUN": 0
+		},
+	"/Week-12/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/index.html",
+		"oF": 0
+		},
+	"/Week-12/main-api.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-12/main-api-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-12/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-12/main-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-12/prism/prism-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/prism/prism-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-12/prism/prism.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/prism/prism-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-12/prism/prism.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-12/prism/prism-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-12/shaun-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/shaun-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-12/shaun-styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/shaun-styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/Week-12/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/Week-12/styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		}
 	},
 "hooks": [

@@ -1,0 +1,67 @@
+body {
+  background: #ecf0f1; }
+
+pre, code {
+  white-space: pre-wrap; }
+
+* {
+  text-shadow: 0 2px 3px #fff; }
+
+h1 {
+  color: #34495e;
+  font-weight: bold;
+  font-size: 4em; }
+
+section {
+  border-left: 30px solid #c0392b;
+  padding-left: 2em;
+  width: 800px; }
+
+h3 {
+  margin-top: 2em; }
+
+p {
+  margin-left: 2em; }
+
+.example {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: bold;
+  color: #3498db; }
+
+.example::before {
+  content: "Output: ";
+  color: #c0392b; }
+
+.theAwesomeClass {
+  display: block;
+  text-shadow: none;
+  text-align: center; }
+  .theAwesomeClass p {
+    text-shadow: none;
+    color: inherit;
+    margin: inherit; }
+
+footer {
+  height: 100px;
+  background-color: #34495e;
+  margin-top: 4em;
+  text-shadow: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+span.emphasis {
+  font-style: oblique;
+  font-weight: bold;
+  color: #c0392b; }
+
+#js-selector-examples span {
+  color: inherit; }
+
+#js-querySelector span {
+  color: inherit; }
+
+#js-querySelectorAll span {
+  color: inherit; }

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- Third-Party CDNs -->
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' rel='stylesheet'>
+<link href='./prism/prism.css' rel='stylesheet'>
+<link href='shaun-styles.css' rel='stylesheet'>
+<!-- Custom CSS -->
+<link href='styles.css' rel='stylesheet'>
+<title>JSON & APIs - Part 1</title>
+</head>
+<body>
+<div class='container'>
+<header class='mt-5' id='main-header'>
+<h1>JSON & APIs - Part 1</h1>
+</header>
+<hr>
+<hr>
+<article>
+<main class='my-5'>
+<header class='mb-4' id='secondary-header'>
+<h2>JSON VS XML</h2>
+<hr>
+</header>
+<section>
+<p class='content'>
+Below are 2 very common data structures that you will see when dealing with data either that you're storing or you may be retrieving from a third-party source. The two data blocks below are known as
+<span class='emphasis'>XML</span>
+and
+<span class='emphasis'>JSON</span>
+respectively.
+</p>
+<div class='row'>
+<div class='col-6'>
+<pre><code class='language-xml'>// XML
+&lt;product&gt;
+  &lt;sku&gt;345678&lt;/sku&gt;
+  &lt;name&gt;Worms&lt;/name&gt;
+  &lt;weight&gt;1&lt;/weight&gt;,
+  &lt;dimensions&gt;
+    &lt;height&gt;10&lt;/height&gt;,
+    &lt;width&gt;10&lt;/width&gt;,
+    &lt;length&gt;20&lt;/length&gt;
+  &lt;/dimensions&gt;
+  &lt;price&gt;2.35&lt;/price&gt;
+&lt;/product&gt;</code></pre>
+</div>
+<div class='col-6'>
+<pre><code class='language-json'>// JSON
+{
+  "sku": 345678,
+  "name": "Worms",
+  "weight": 1,
+  "dimensions": {
+    "height": 10,
+    "width": 10,
+    "length": 20
+  },
+  "price": 2.35
+}</code></pre>
+</div>
+</div>
+<p class='content'>
+<span class='emphasis'>XML</span>
+was a common format used to give data meaning through the utilization of tags and nesting. XML is still used quite a bit today though much of it has been replaced with JSON due to its speed and native compatibility with JavaScript.
+</p>
+<p class='content'>
+There is, however, one major use for XML that you use every time you create a web page:
+<span class='emphasis'>HTML.</span>
+HTML is an XML-based language that uses the same defined rules of XML to describe data and structure. One day perhaps HTML will be replaced by JSON as well. Many frameworks provide various templating options for dealing with the archaic structure of HTML, so I think it's a safe assumption that one of them may eventually force browsers to support native parsing of them.
+</p>
+<p class='content'>
+<span class='emphasis'>JSON</span>
+is a clean and fast data language.
+<span class='emphasis'>JSON stands for JavaScript Object Notation.</span>
+It describes a data object which can allow the JavaScript API to interact natively with that object. You will remember when we created an object literal during our Objects lesson. The JSON structure is essentially that. There are, however, some rules.
+</p>
+</section>
+</main>
+<section>
+<header>
+<h3>Working with JSON</h3>
+<hr>
+</header>
+<p class='content'>
+<span class='emphasis'>
+JSON
+</span>
+supports a few data types as storage:
+</p>
+<ul>
+<li class='emphasis'>Strings</li>
+<li class='emphasis'>Integers</li>
+<li class='emphasis'>Floats</li>
+<li class='emphasis'>Arrays</li>
+<li class='emphasis'>Objects</li>
+</ul>
+<p class='content'>
+Seem familiar? Looks a lot like
+<span class='emphasis'>literal objects</span>
+doesn't it? However, JSON doesn't support functions, so it is limited, but that's ok as we wouldn't want to be consuming functions from APIs!
+</p>
+<header>
+<h4>JSON Example!</h4>
+</header>
+<ol>
+<li>
+<div class='inst'>
+Create a new file called
+<span class='emphasis'>data.json</span>
+And add the following code:
+</div>
+<pre><code class='language-json'>{
+
+}</code></pre>
+<p class='content'>
+This is the opening to our JSON structure. Because our JSON is an object, it is imperative that our structure start with a set of curly braces
+<span class='emphasis'>{}</span>
+or square brackets
+<span class='emphasis'>[].</span>
+<br>
+<span class='emphasis'>These do mean different things, though. Perhaps you can guess what they are!</span>
+</p>
+</li>
+<li>
+<p class='content'>
+<span class='emphasis'>{}</span>
+represent an object. Objects are made up of properties and values, as we have learned before. JSON objects are the same. The only real separation is how you write your keys. They must be strings to be valid!
+</p>
+<div class='inst'>Add the following properties (keys) and values:</div>
+<pre><code class='language-json'>{
+  "companyName": "Bob's Bait and Tackle Shop",
+  "streetAddress1": "456 Flounder's Ln.",
+  "streetAddress2": "Unit #24",
+  "city": "Watershed",
+  "province": "Nova Scotia",
+  "country": "Canada",
+  "established": 1965,
+  "active": true,
+  "slogan": "We're masters of bait!"
+}</code></pre>
+<p class='content'>
+As you can see, JSON supports strings and integers. It also supports floats, arrays, and other objects. The
+<span class='emphasis'>{}</span>
+represent an object.
+</p>
+</li>
+<li>
+<p class='content'>
+<span class='emphasis'>[]</span>
+represent an array. Arrays are made up of just values, as we have learned before. JSON arrays are the same. We use arrays to store lists of values!
+</p>
+<div class='inst'>Add the following property (key) and array:</div>
+<pre><code class='language-json'>{
+  "companyName": "Bob's Bait and Tackle Shop",
+  "streetAddress1": "456 Flounder's Ln.",
+  "streetAddress2": "Unit #24",
+  "city": "Watershed",
+  "province": "Nova Scotia",
+  "country": "Canada",
+  "established": 1965,
+  "active": true,
+  "slogan": "We're masters of bait!",
+  "featuredProducts": [
+    345678,
+    345678,
+    123534
+  ]
+}</code></pre>
+<p class='content'>
+The above array is storing a list of integer values. These values will be used to represent skus of products. We don't need to store the entire product, just a reference to it through a unique identifier, like our skus.
+</p>
+</li>
+<li>
+<p class='content'>
+JSON also supports nested data. This data can be more objects and more arrays and go as many levels deep as your memory supports!
+</p>
+<div class='inst'>Add the following products to our JSON block:</div>
+<pre><code class='language-json'>{
+  "companyName": "Bob's Bait and Tackle Shop",
+  "streetAddress1": "456 Flounder's Ln.",
+  "streetAddress2": "Unit #24",
+  "city": "Watershed",
+  "province": "Nova Scotia",
+  "country": "Canada",
+  "established": 1965,
+  "active": true,
+  "slogan": "We're masters of bait!",
+  "featuredProducts": [
+    345678,
+    345678,
+    123534
+  ],
+  "products": [
+    {
+      "sku": 345678,
+      "name": "Worms",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 2.35
+    },
+    {
+      "sku": 345678,
+      "name": "Minnows",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 3.75
+    },
+    {
+      "sku": 345678,
+      "name": "Leeches",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 4.65
+    },
+    {
+      "sku": 234567,
+      "name": "Blue Whale",
+      "weight": 140000,
+      "dimensions": {
+        "height": 300,
+        "width": 400,
+        "length": 3306
+      },
+      "price": 123000.65
+    },
+    {
+      "sku": 345345,
+      "name": "Colossal Squid",
+      "weight": 75000,
+      "dimensions": {
+        "height": 100,
+        "width": 200,
+        "length": 1400
+      },
+      "price": 23000.65
+    },
+    {
+      "sku": 123534,
+      "name": "Krakken",
+      "weight": 675000,
+      "dimensions": {
+        "height": 600,
+        "width": 800,
+        "length": 8000
+      },
+      "price": 234568.65
+    }
+  ]
+}</code></pre>
+<p class='content'>
+Noticed we have an array of products. Inside each product block is a nested object called
+<span class='emphasis'>dimensions.</span>
+We can also have nested arrays!
+</p>
+</li>
+<li>
+<div class='inst'>Add the last property with it's array value of objects:</div>
+<pre><code class='language-json'>{
+  "companyName": "Bob's Bait and Tackle Shop",
+  "streetAddress1": "456 Flounder's Ln.",
+  "streetAddress2": "Unit #24",
+  "city": "Watershed",
+  "province": "Nova Scotia",
+  "country": "Canada",
+  "established": 1965,
+  "active": true,
+  "slogan": "We're masters of bait!",
+  "featuredProducts": [
+    345678,
+    345678,
+    123534
+  ],
+  "products": [
+    {
+      "sku": 345678,
+      "name": "Worms",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 2.35
+    },
+    {
+      "sku": 345678,
+      "name": "Minnows",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 3.75
+    },
+    {
+      "sku": 345678,
+      "name": "Leeches",
+      "weight": 1,
+      "dimensions": {
+        "height": 10,
+        "width": 10,
+        "length": 20
+      },
+      "price": 4.65
+    },
+    {
+      "sku": 234567,
+      "name": "Blue Whale",
+      "weight": 140000,
+      "dimensions": {
+        "height": 300,
+        "width": 400,
+        "length": 3306
+      },
+      "price": 123000.65
+    },
+    {
+      "sku": 345345,
+      "name": "Colossal Squid",
+      "weight": 75000,
+      "dimensions": {
+        "height": 100,
+        "width": 200,
+        "length": 1400
+      },
+      "price": 23000.65
+    },
+    {
+      "sku": 123534,
+      "name": "Krakken",
+      "weight": 675000,
+      "dimensions": {
+        "height": 600,
+        "width": 800,
+        "length": 8000
+      },
+      "price": 234568.65
+    }
+  ],
+  "onSale": [
+    {"sku": 345678, "discountPercent": 25},
+    {"sku": 345345, "discountPercent": 75}
+  ]
+}</code></pre>
+<p class='content'>
+Our array above is storing 2 objects that represent the products on sale. We're using the "sku" property to reference our actual products and are providing a "discountPercent" property that will tell our application how much the product should be discounted by.
+</p>
+</li>
+</ol>
+</section>
+<section>
+<header>
+<h3>Working with remote JSON</h3>
+<hr>
+</header>
+</section>
+</article>
+</div>
+<footer>
+&copy;2018 - Shaun McKinnon
+</footer>
+<!-- Third-Party CDNs -->
+<script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script crossorigin='anonymous' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src='./prism/prism.js'></script>
+<!-- Custom JS -->
+<script src='main.js'></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+//colors
+$color_athens_gray_approx: #ecf0f1;
+$white: #fff;
+$color_flush_mahogany_approx: #c0392b;
+$color_pickled_bluewood_approx: #34495e;
+$color_curious_blue_approx: #3498db;
+
+.inst {
+  color: $color_curious_blue_approx;
+  font-style: oblique;
+}
+
+li.emphasis {
+  color: $color_curious_blue_approx;
+  font-weight: bold;
+}
