@@ -16,6 +16,13 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/_headers": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "/_headers",
+		"oF": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1573,6 +1580,16 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "/Week-12/main-api-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-12/main-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-12/main-min-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
