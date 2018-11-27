@@ -4,10 +4,10 @@
 <!-- Third-Party CDNs -->
 <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' rel='stylesheet'>
 <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' rel='stylesheet'>
-<link href='./prism/prism.css' rel='stylesheet'>
-<link href='shaun-styles.css' rel='stylesheet'>
+<link href='../prism/prism.css' rel='stylesheet'>
+<link href='../shaun-styles.css' rel='stylesheet'>
 <!-- Custom CSS -->
-<link href='styles.css' rel='stylesheet'>
+<link href='../styles.css' rel='stylesheet'>
 <title>JSON & APIs - Part 1</title>
 </head>
 <body>
@@ -376,7 +376,7 @@ There is an issue we should discuss before we proceed to consume a remote JSON f
 <small>
 <a href='https://www.codecademy.com/articles/what-is-cors'>
 <i class='fa fa-link'></i>
-What is Cors - Code Academy
+What is CORS - Code Academy
 </a>
 </small>
 </header>
@@ -385,8 +385,240 @@ When we request a resource (image, CSS, JavaScript, etc...), that is not local t
 <span class='emphasis'>cross-origin request.</span>
 Requests for local resources is known as a
 <span class='emphasis'>same-origin request.</span>
-CORS allow servers to specify who is allowed access to their assets and how those requests are handled.
+CORS allow servers to specify who is allowed access to their assets and how those requests are handled. There are several headers that can be attached to both the request and response to help the handshake.
 </p>
+<header>
+<h4>Introducing Netlify! (Also, Lab-06 Part 01!!!)</h4>
+<small>
+<a href='https://www.netlify.com/'>
+<i class='fa fa-link'></i>
+https://www.netlify.com/
+</a>
+</small>
+</header>
+<p class='content'>
+<span class='emphasis'>Netlify</span>
+is a free online service that will allow you to host a website (that doesn't require any server side language) for free. You can use AWS Lambdas to perform minimal server side functionality, but it isn't required to run. Plus for our purposes, we don't need it. We will need to do some stuff in regards to the issue with CORS.
+</p>
+<ol>
+<li>
+<div class='inst'>
+Create a new repository in GitHub for today's lesson
+</div>
+</li>
+<li>
+<div class='inst'>
+Push the HTML, CSS, JavaScript, and JSON files up to the repository
+</div>
+</li>
+<li>
+<div class='inst'>
+Navigate to
+<a href='https://www.netlify.com/'>
+<i class='fa fa-link'></i>
+Netlify.com
+</a>
+and sign up for a new account. It's completely free and doesn't require a credit card to sign up
+</div>
+</li>
+<li>
+<div class='inst'>
+Click the
+<span class='emphasis'>New site from Git</span>
+button to add a new site
+</div>
+</li>
+<li>
+<div class='inst'>
+Click the
+<span class='emphasis'>GitHub</span>
+link under the
+<span class='emphasis'>Continuous Deployment</span>
+section
+</div>
+</li>
+<li>
+<div class='inst'>
+Authorize access to Netlify
+</div>
+</li>
+<li>
+<div class='inst'>
+Choose your repository
+</div>
+</li>
+<li>
+<div class='inst'>
+Choose the branch to deploy (should be master)
+</div>
+</li>
+<li>
+<div class='inst'>
+Click
+<span class='emphasis'>Deploy site</span>
+</div>
+</li>
+</ol>
+<p class='content'>
+We are almost done. Now in order to allow CORS we'll need to add a file to our repository called<span class='emphasis'>&nbsp;
+_headers</span>. This file will tell Netlify what our response headers should be allowing us to enable a friendly response upon our data.json request. We'll be specific so it is ONLY our data.json that is shared.
+</p>
+<p class='content'>
+<span class='emphasis'>Below is the contents of the file</span>
+</p>
+<ol>
+<li>
+<div class='inst'>
+Create a new file called
+<span class='emphasis'>_headers</span>
+</div>
+</li>
+<li>
+<div class='inst'>
+Add the following to the file
+</div>
+<pre><code class='language-json'>/week-12/data.json
+  Access-Control-Allow-Origin: *</code></pre>
+</li>
+<li>
+<div class='inst'>
+Push your changes to GitHub
+</div>
+<p class='content'>
+<span class='emphasis'>
+You will submit your GitHub repository link and Netlify link to Blackboard!
+</span>
+</p>
+</li>
+</ol>
+<header>
+<h4>
+Introducing APIs -
+<span class='emphasis'>A VERY brief introduction...</span>
+</h4>
+</header>
+<p class='content'>
+Often we will want to use third-party data within our applications.
+<span class='emphasis'>APIs (Application Programming Interface)</span>
+provide methods for us to access data. There are several types of APIs though many people associate API with ReSTFul APIs. Essentially ReSTFul APIs work by parsing HTTP headers and URLs to route methods and data back to the requester or send data to the responder. They know which way information is going through the use of
+<span class='emphasis'>HTTP Verbs.</span>
+</p>
+<p class='content'>
+The most common available
+<span class='emphasis'>HTTP Verbs</span>
+are as follows:
+</p>
+<ul>
+<li>
+<span class='emphasis'>GET:</span>
+Is used for requesting information from the host.
+</li>
+<li>
+<span class='emphasis'>POST:</span>
+Is used for writing new information to the host.
+</li>
+<li>
+<span class='emphasis'>PUT/PATCH:</span>
+Is used for updating, modifying/replacing information on the host.
+</li>
+<li>
+<span class='emphasis'>DELETE:</span>
+Is used to remove information from the host.
+</li>
+</ul>
+<p class='content'>
+Our very simple API is only going to use the
+<span class='emphasis'>GET</span>
+HTTP verb which will return our data from our
+<span class='emphasis'>Netlify</span>
+site.
+</p>
+<header>
+<h4>
+<span class='emphasis'>Fetching</span>
+Our Data
+</h4>
+</header>
+<p class='content'>
+Interacting with web-based APIs is made easy with the new
+<span class='emphasis'>fetch()</span>
+method provided by the JavaScript API. Before fetch, we would use the XHR API to access our data. fetch() is much simpler BUT isn't supported AT ALL in IE. A way to fix this is to include a polyfill library which will glue in fetch() into our JavaScript API where it isn't available. Essentially this is just wrapping the XHR library.
+</p>
+<ol>
+<li>
+<div class='inst'>Let's add the polyfill to our scripts under our index.html page just above our jQuery script</div>
+<pre><code class='language-html'>&lt;script src='fetch.umd.js'&gt;&lt;/script&gt;</code></pre>
+</li>
+</ol>
+<p class='content'>
+Now we're ready to finally fetch our data.
+<span class='emphasis'>LET'S DO THIS!!!!</span>
+</p>
+<ol>
+<li>
+<div class='inst'>
+First we'll need to set our request URL
+</div>
+<pre><code class='language-javascript'>const requestURL = "https://{your-netlify-link}.netlify.com/week-12/data.json";</code></pre>
+</li>
+<li>
+<p class='content'>
+<span class='emphasis'>fetch()</span>
+utilizes the new
+<span class='emphasis'>Promise API</span>
+which is a fantastic addition to JavaScript as it stops the need for multiple callbacks. Because APIs return data at their leisure, we need someway to know when it's done due to JavaScript's asynchronous nature. We can do this by relying on the Promise.
+</p>
+<div class='inst'>
+We need to fetch our url:
+</div>
+<pre><code class='language-javascript'>fetch(requestURL)</code></pre>
+<p class='content'>
+fetch() is wrapped in a Promise (which you'll learn more about in your next advanced JavaScript course). When Promises are complete they will full fill their promise. We can tap into that resolution to complete other operations.
+</p>
+</li>
+<li>
+<p class='content'>
+<span class='emphasis'>.then()</span>
+is a method that is made available from the Promise. .then() is called when the promise has completed allowing us to perform operations.
+</p>
+<p class='content'>
+<span class='emphasis'>fetch()</span>
+is a little confusing in that it returns a response object. The response object contains a lot of properties including a body. The body has 2 very important methods on it that both return Promises themselves:
+<span class='emphasis'>.text()</span>
+and
+<span class='emphasis'>.json().</span>
+</p>
+<p class='content'>
+The second promise will return our completed body data.
+</p>
+<div class='inst'>
+Using the
+<span class='emphasis'>.then()</span>
+method, pass a callback function that receives the response object and returns the Promise with the
+<span class='emphasis'>.json()</span>
+method.
+</div>
+<pre><code class='language-javascript'>.then(function (response) {
+  return response.json();
+})</code></pre>
+</li>
+<li>
+<p class='content'>
+Now we have our response object, but it's useless to us.
+<span class='emphasis'>WE WANT THE DATA!!!</span>
+In order to get the data we'll chain another .then() which our resolved promise will pass our data object to.
+</p>
+<div class='inst'>
+Add another .then() method passing a callback that will receive our data object
+</div>
+<pre><code class='language-javascript'>.then(function (data) {
+  console.log(data);
+});</code></pre>
+<p class='content'>
+If you investigate the console you will see our data object. The best part is because it's JSON it's a workable object that our native JavaScript API can work with.
+</p>
+</li>
+</ol>
 </section>
 </article>
 </div>
@@ -394,10 +626,11 @@ CORS allow servers to specify who is allowed access to their assets and how thos
 &copy;2018 - Shaun McKinnon
 </footer>
 <!-- Third-Party CDNs -->
+<script src='../fetch.umd.js'></script>
 <script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 <script crossorigin='anonymous' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-<script src='./prism/prism.js'></script>
+<script src='../prism/prism.js'></script>
 <!-- Custom JS -->
-<script src='main.js'></script>
+<script src='../main.js'></script>
 </body>
 </html>

@@ -1546,6 +1546,29 @@
 		"oAP": "/Week-11/Week-11-Tuesday.mp4",
 		"oF": 0
 		},
+	"/Week-12/Bobs-Site/bobs-site.haml": {
+		"cB": 0,
+		"cDA": 0,
+		"eHT": 0,
+		"ft": 256,
+		"nEA": 0,
+		"oA": 0,
+		"oAP": "/Week-12/Bobs-Site/bobs-site.html",
+		"oF": 0,
+		"oFM": 2,
+		"uDQ": 0,
+		"uUN": 0
+		},
+	"/Week-12/Bobs-Site/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/Week-12/Bobs-Site/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/Week-12/data.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -1554,24 +1577,54 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/Week-12/index.haml": {
+	"/Week-12/fetch.umd.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/Week-12/fetch.umd-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/Week-12/JSON-APIS-Part-01/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Week-12/index.html",
+		"oAP": "/Week-12/JSON-APIS-Part-01/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Week-12/index.html": {
+	"/Week-12/JSON-APIS-Part-01/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-12/index.html",
+		"oAP": "/Week-12/JSON-APIS-Part-01/index.html",
+		"oF": 0
+		},
+	"/Week-12/JSON-APIS-Part-02/index.haml": {
+		"cB": 0,
+		"cDA": 0,
+		"eHT": 0,
+		"ft": 256,
+		"nEA": 0,
+		"oA": 0,
+		"oAP": "/Week-12/JSON-APIS-Part-02/index.html",
+		"oF": 0,
+		"oFM": 2,
+		"uDQ": 0,
+		"uUN": 0
+		},
+	"/Week-12/JSON-APIS-Part-02/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/JSON-APIS-Part-02/index.html",
 		"oF": 0
 		},
 	"/Week-12/main-api.js": {
@@ -1643,19 +1696,6 @@
 		"oAP": "/Week-12/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/Week-12/shaun-styles.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/Week-12/shaun-styles.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/Week-12/styles.css": {
 		"aP": 1,
