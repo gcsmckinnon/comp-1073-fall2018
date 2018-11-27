@@ -14,6 +14,8 @@ const learningExamples = [
   ['Week-09/Objects-Part-One', 'Objects: Part One'],
   ['Week-09/Objects-Part-Two', 'Objects: Part Two'],
   ['Week-10/Prototypes', 'Object Prototypes'],
+  ['Week-12/JSON-APIS/JSON-APIS-Part-01', 'JSON & APIs Part 01'],
+  ['Week-12/JSON-APIS/JSON-APIS-Part-02', 'JSON & APIs Part 02'],
 ];
 
 const games = [
