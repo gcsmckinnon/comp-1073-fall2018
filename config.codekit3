@@ -1546,168 +1546,145 @@
 		"oAP": "/Week-11/Week-11-Tuesday.mp4",
 		"oF": 0
 		},
-	"/Week-12/Bobs-Site/bobs-site.haml": {
-		"cB": 0,
-		"cDA": 0,
-		"eHT": 0,
-		"ft": 256,
-		"nEA": 0,
-		"oA": 0,
-		"oAP": "/Week-12/Bobs-Site/bobs-site.html",
-		"oF": 0,
-		"oFM": 2,
-		"uDQ": 0,
-		"uUN": 0
-		},
-	"/Week-12/Bobs-Site/styles.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/Week-12/Bobs-Site/styles-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/Week-12/data.json": {
+	"/Week-12/JSON-APIS/data.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/Week-12/data-min.json",
+		"oAP": "/Week-12/JSON-APIS/data-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/Week-12/fetch.umd.js": {
+	"/Week-12/JSON-APIS/fetch.umd.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/Week-12/fetch.umd-min.js",
+		"oAP": "/Week-12/JSON-APIS/fetch.umd-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Week-12/JSON-APIS-Part-01/index.haml": {
+	"/Week-12/JSON-APIS/JSON-APIS-Part-01/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Week-12/JSON-APIS-Part-01/index.html",
+		"oAP": "/Week-12/JSON-APIS/JSON-APIS-Part-01/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Week-12/JSON-APIS-Part-01/index.html": {
+	"/Week-12/JSON-APIS/JSON-APIS-Part-01/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-12/JSON-APIS-Part-01/index.html",
+		"oAP": "/Week-12/JSON-APIS/JSON-APIS-Part-01/index.html",
 		"oF": 0
 		},
-	"/Week-12/JSON-APIS-Part-02/index.haml": {
+	"/Week-12/JSON-APIS/JSON-APIS-Part-02/index.haml": {
 		"cB": 0,
 		"cDA": 0,
 		"eHT": 0,
 		"ft": 256,
 		"nEA": 0,
 		"oA": 0,
-		"oAP": "/Week-12/JSON-APIS-Part-02/index.html",
+		"oAP": "/Week-12/JSON-APIS/JSON-APIS-Part-02/index.html",
 		"oF": 0,
 		"oFM": 2,
 		"uDQ": 0,
 		"uUN": 0
 		},
-	"/Week-12/JSON-APIS-Part-02/index.html": {
+	"/Week-12/JSON-APIS/JSON-APIS-Part-02/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/Week-12/JSON-APIS-Part-02/index.html",
+		"oAP": "/Week-12/JSON-APIS/JSON-APIS-Part-02/index.html",
 		"oF": 0
 		},
-	"/Week-12/main-api.js": {
+	"/Week-12/JSON-APIS/main-api.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/Week-12/main-api-min.js",
+		"oAP": "/Week-12/JSON-APIS/main-api-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Week-12/main-min.js": {
+	"/Week-12/JSON-APIS/main-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/Week-12/main-min-min.js",
+		"oAP": "/Week-12/JSON-APIS/main-min-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Week-12/main.js": {
+	"/Week-12/JSON-APIS/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/Week-12/main-min.js",
+		"oAP": "/Week-12/JSON-APIS/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Week-12/prism/prism-min.css": {
+	"/Week-12/JSON-APIS/prism/prism-min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Week-12/prism/prism-min-min.css",
+		"oAP": "/Week-12/JSON-APIS/prism/prism-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Week-12/prism/prism.css": {
+	"/Week-12/JSON-APIS/prism/prism.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Week-12/prism/prism-min.css",
+		"oAP": "/Week-12/JSON-APIS/prism/prism-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Week-12/prism/prism.js": {
+	"/Week-12/JSON-APIS/prism/prism.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/Week-12/prism/prism-min.js",
+		"oAP": "/Week-12/JSON-APIS/prism/prism-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/Week-12/shaun-styles.css": {
+	"/Week-12/JSON-APIS/shaun-styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Week-12/shaun-styles-min.css",
+		"oAP": "/Week-12/JSON-APIS/shaun-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Week-12/styles.css": {
+	"/Week-12/JSON-APIS/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Week-12/styles-min.css",
+		"oAP": "/Week-12/JSON-APIS/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/Week-12/styles.scss": {
+	"/Week-12/JSON-APIS/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1715,10 +1692,81 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/Week-12/styles.css",
+		"oAP": "/Week-12/JSON-APIS/styles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/Week-12/Starter-JSON-APIS.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Starter-JSON-APIS.zip",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Thursday.screenflow/Media/DE6EF2E9-B7CA-4A60-88DB-FCD62AE89D07_{1F191BEB-2940-4D54-9072-C06BDB563C62}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Thursday.screenflow/Media/DE6EF2E9-B7CA-4A60-88DB-FCD62AE89D07_{1F191BEB-2940-4D54-9072-C06BDB563C62}.scc",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Thursday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Thursday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Thursday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 230813,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Thursday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-12/Week-12-Thursday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Thursday.screenflow/version.plist",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Tuesday.screenflow/Media/23759C92-AEDA-49A3-8959-965A673D76AB_{16313FCA-66D8-4D4E-BDF0-9D0307CB1D3D}.scc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Tuesday.screenflow/Media/23759C92-AEDA-49A3-8959-965A673D76AB_{16313FCA-66D8-4D4E-BDF0-9D0307CB1D3D}.scc",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Tuesday.screenflow/ScreenFlowDocument.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Tuesday.screenflow/ScreenFlowDocument.dat",
+		"oF": 0
+		},
+	"/Week-12/Week-12-Tuesday.screenflow/thumbnail.jpg": {
+		"ft": 16384,
+		"iS": 311677,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Tuesday.screenflow/thumbnail.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/Week-12/Week-12-Tuesday.screenflow/version.plist": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/Week-12/Week-12-Tuesday.screenflow/version.plist",
+		"oF": 0
 		}
 	},
 "hooks": [

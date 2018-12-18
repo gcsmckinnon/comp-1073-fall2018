@@ -1,3 +1,29 @@
+html, body, #christmas-cheer {
+  height: 100%;
+  width: 100%;
+}
+
+#christmas-cheer {
+  background-image: url('emil-vilsek-488155-unsplash.jpg');
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#christmas-cheer h1, #christmas-cheer h2 {
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.75);
+}
+
+#christmas-cheer h1 {
+  font-size: 6em;
+}
+
+#christmas-cheer h2 {
+  font-size: 4.5em;
+}
+
 #examples {
   display: grid;
   grid-template: auto auto auto/auto auto auto;
